@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+  <!--ios适配meta-->
+  <meta content="yes" name="apple-mobile-web-app-capable">
+  <meta content="yes" name="apple-touch-fullscreen">
+  <meta content="telephone=no,email=no" name="format-detection">
+  <title>首页</title>
+  <link rel="stylesheet" href="style/main.css"/>
+</head>
+<body >
+<div class="fixed-top">
+
+</div>
+<div id="loading-page" :class="{'animationPageUp': isUp}" class="landing-container">
+  <div class="loading-page">
+    <img src="assets/button_landing@2x.png" class="button-red"
+         @click="buttonClick" :class="{'animationButton':button, 'animationButtonInfinite':!button}"/>
+  </div>
+  <img src="assets/register_bg@2x.png" class="bottom"/>
+
+</div>
+
+<script src="script/lib/autoSetRem.js"></script>
+<script src="script/lib/jquery-3.2.1.js"></script>
+<script src="script/lib/vue.min.js"></script>
+<script src="script/lib/vue-resource.js"></script>
+<script src="script/main.js"></script>
+</body>
+</html>

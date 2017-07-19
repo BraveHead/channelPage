@@ -1,0 +1,108 @@
+
+*{margin: 0;padding: 0;}
+html{width: 100%;height: 100%;font-size: 100px;}
+body{
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    font-family: "Helvetica Neue", Helvetica, Arial, "PingFang SC", "Hiragino Sans GB", "Heiti SC", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+    overflow: hidden;
+}
+
+/*landing Page*/
+.landing-container{
+    width: 100%;
+    height: 13.31rem;
+    background-color: red;
+}
+.loading-page{
+    width: 100%;
+    height: 12.06rem;
+    background: url("../assets/landing_page_bg.png") no-repeat center;
+    background-size: 7.50rem 12.06rem;
+    position: relative;
+    top: 0;
+    margin-top: 1.28rem;
+    overflow: hidden;
+}
+.fixed-top{
+    width: 100%;
+    height: 1.28rem;
+    background-color: blue;
+    position: fixed;
+    top: 0;
+    z-index: 2;
+}
+.button-red{
+    width: 1.97rem;
+    height:1.97rem;
+    position: absolute;
+    top: 8.34rem;
+    left: 2.75rem;
+}
+
+/*.animationHover{
+    -webkit-animation: hoverB 1.2s 1s ease both;
+}*/
+/*@-webkit-keyframes hoverB {*/
+    /*0%{-webkit-transform: scale(1)}*/
+    /*100%{-webkit-transform: scale(1.5)}*/
+/*}*/
+
+/*按钮的点击动画*/
+.animationButton{
+    -webkit-animation:flipOutY 1s .2s ease both;
+}
+@-webkit-keyframes flipOutY{
+    0%{-webkit-transform:rotateY(0deg) scale3d(1,1,1) ;
+        opacity:1}
+    10%{-webkit-transform:rotateY(0deg) scale3d(1.2, 1.2, 1.2) ;
+        opacity:1;}
+    80%{-webkit-transform: rotateY(360deg) scale3d(1.2, 1.2, 1.2) ;
+        opacity:1}
+    100%{-webkit-transform: rotateY(360deg) scale3d(1, 1, 1) ;
+        opacity:1;}
+}
+
+/*按钮的初始动画*/
+.animationButtonInfinite{
+    animation: buttonInfinite 1s ease infinite;
+}
+@keyframes buttonInfinite {
+    0%{opacity: 1;transform: scale3d(0.9,0.9,0.9)}
+    100%{opacity: 0.9;transform: scale3d(1.1, 1.1, 1.1)}
+}
+/*页面的点击动画*/
+.animationPageUp{
+    animation:pageUp 1.5s .2s ease both;
+    /*animation: pageUpFixed .2s 1.7s ease both;*/
+}
+
+@keyframes pageUp {
+    0%{transform:translateY(0);-webkit-backface-visibility: hidden;}
+    20%{transform:translateY(0.2rem);-webkit-backface-visibility: hidden;}
+    100%{transform:translateY(-12.03rem);;-webkit-backface-visibility: hidden;}
+}
+
+/*@keyframes pageUpFixed {*/
+    /*0%{transform:translateY(-12.03rem);}*/
+    /*100%{transform:translateY(1.28rem);}*/
+/*}*/
+/*注册页面进来动画*/
+.animationRegisterUp{
+    animation:registerUp 1s 0s ease both;
+}
+
+@keyframes registerUp {
+    0%{transform: translateY(12.03rem)}
+    20%{opacity: 0;transform:translateY(12.03rem)}
+    100%{opacity: 1;transform:translateY(0rem)}
+}
+.bottom{
+    position: relative;
+    height: 27.03rem;
+    width: 7.50rem;
+    display: block;
+}
+
+
