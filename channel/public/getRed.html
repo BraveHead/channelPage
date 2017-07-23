@@ -8,6 +8,7 @@
     <meta content="yes" name="apple-touch-fullscreen">
     <meta content="telephone=no,email=no" name="format-detection">
     <title>注册后领取红包</title>
+    <script src="https://s22.cnzz.com/z_stat.php?id=1262703831&web_id=1262703831" language="JavaScript"></script>
     <link rel="stylesheet" href="style/main.css"/>
 </head>
 <body style="overflow: hidden">
@@ -34,9 +35,11 @@
 <script src="script/lib/autoSetRem.js"></script>
 <script src="script/lib/jquery-3.2.1.js"></script>
 <script>
+    document.querySelector('a').style.display = 'none';
     $('.red-rules-but').on('click',function () {
         $('.red-bg-container').show();
         $('.rules-list-bg').show().removeClass('animationRulesOutContent').addClass('animationRulesText');
+        _czc.push(﻿["_trackEvent",'red_rule','点击','红包规则']);
     });
     $('.close-bg').on('click',function () {
 //        $('.red-bg-container').hide();
@@ -45,8 +48,8 @@
             $('.red-bg-container').hide();
         },1000)
     });
-    window.addEventListener('beforeunload', function (e) {
-        alert('123');
+    $('.download-app-link').on('click', function () {
+        _czc.push(﻿["_trackEvent",'download','点击','下载']);
     })
 </script>
 </body>
