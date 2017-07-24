@@ -1,4 +1,5 @@
 
+import './lib/autoSetRem'
 document.querySelector('a').style.display = 'none';
 Vue.http.options.emulateJSON = true;
 var loadingPage = new Vue({
@@ -17,13 +18,14 @@ var loadingPage = new Vue({
         passwordShow: false,  //密码弹框提醒判断
         checkNumberText: '',     //验证码
         checkShow: false,   //验证码弹框提醒判断
-        isClick: false,  //防止获取验证码按钮多次点击
+        isClick: false,  //点击在验证码
+        isDuable: false,  //多次点击验证码
         clickColor: '#ffc000',   //点击按钮的颜色,
-        baseUrl: 'https://test.qtz360.com/api/rest/',   //url根路径
+        baseUrl: 'https://www.qtz360.com/api/rest/',   //测试url根路径
+        // baseUrl: 'https://www.qtz360.com/api/rest/',  //url跟路径
         phoneDisplay: 'none',
         checkDisplay: 'none',
-        // sn: window.location.href.slice(window.location.href.indexOf('sn=') + 3),
-        sn: '2152121',  //渠道码
+        sn: '',  //渠道码
         channelId: '',  //渠道id
         channelCookie: ''  //渠道cookie
 
@@ -40,10 +42,13 @@ var loadingPage = new Vue({
         //首页红包按钮的点击页面上弹的判断
         buttonClick: function () {
             this.button = true;
-            document.querySelector('body').style.overflow = 'scroll';
             setTimeout(() => {
                 this.isUp = true;
+                document.querySelector('body').style.height = '100%';
+                document.querySelector('body').style.overflowY = 'scroll';
+                document.querySelector('body').style.position = 'relative'
             }, 1100);
+            _czc.push(﻿["_trackEvent",'page2','点击','page2']);
             _czc.push(﻿["_trackEvent",'page1_button','点击','首页按钮']);
         },
         //手机号码格式验证
@@ -76,7 +81,8 @@ var loadingPage = new Vue({
         //获取验证码后样式改变
         checkWordChange: function () {
             if(!this.isClick){
-                let i = 10;
+                let i = 60;
+                this.Duable = true;
                 let id= setInterval(()=>{
                     this.clickColor = '#adadad';
                     this.isClick = true;
@@ -87,8 +93,10 @@ var loadingPage = new Vue({
                         this.clickColor = '#ffc000';
                         this.isClick = false;
                         this.getCheckWordButton = '再次获取';
+                        this.Duable = false;
                         clearInterval(id);
                     }
+                    console.log(this.isClick, '样式改变中..');
                 },1000)
             }
         },
@@ -139,7 +147,7 @@ var loadingPage = new Vue({
         },
         //验证手机号是否注册
         isPhoneExistence: function () {
-            if(this.checkPhone(this.phoneNumber)){
+            if(this.checkPhone(this.phoneNumber) && !this.Duable){
                 let _this = this;
                 this.$http.get(this.baseUrl+'isPhoneUsed',{phoneReg:this.phoneNumber})
                     .then(function (res) {
@@ -147,7 +155,6 @@ var loadingPage = new Vue({
                             _this.phoneTitle = '手机号已注册！';
                             _this.phoneNumShow = true;
                             _this.phoneDisplay = 'block';
-                            console.log('已注册！');
                             setTimeout(()=>{
                                 _this.phoneNumShow = false;
                                 _this.phoneDisplay = "none";
@@ -155,8 +162,8 @@ var loadingPage = new Vue({
                             },1000);
                         }else if(res.data.rcd === 'A0002' && _this.checkPhone(_this.phoneNumber)){
                             //获取验证码
+                            _this.isDuable = true;
                             _this.getPhoneCheckCode();
-                            console.log('验证码发送成功');
                         }
                     })
             }else{
@@ -171,10 +178,10 @@ var loadingPage = new Vue({
         //获取验证码
         getPhoneCheckCode: function () {
             let _this = this;
+            console.log(this.isClick+ '获取验证码之前判断');
             if(!_this.isClick){   //防止多次点击
                 _this.$http.get(_this.baseUrl + 'sendPCode',{phoneReg: _this.phoneNumber})
                     .then(function (res) {
-                        console.log(res.data);
                         if(res.data.rcd === 'R0001' || res.data.rcd === 'M0008_23'){
                             _this.checkWordChange();
                         }
@@ -183,18 +190,23 @@ var loadingPage = new Vue({
         },
         //获取渠道分享人的信息
         getChannelMessage: function () {
-            this.$http.get(this.baseUrl + 'channel/'+ this.sn)
-                .then(function (res) {
-                    if(res.data.rcd === 'R0001'){
-                        this.channelId = res.data.id;
-                        this.channelCookie = res.data.cookie;
-                        this.register();   //注册
-                    }else{
-                        console.log('渠道获取成功'+ res.data.rmg);
-                    }
-                }).catch(function (res) {
-                    console.log(res);
-            })
+            if(window.location.href.indexOf('sn=') != '-1'){
+                this.$http.get(this.baseUrl + 'channel/'+ this.sn)
+                    .then(function (res) {
+                        if(res.data.rcd === 'R0001'){
+                            this.channelId = res.data.id;
+                            this.channelCookie = res.data.cookie;
+                            this.register();   //注册
+                        }else{
+                            console.log('渠道获取成功'+ res.data.rmg);
+                        }
+                    }).catch(function (res) {
+                })
+            }else{
+                this.channelId = null;
+                this.channelCookie = null;
+                this.register();   //注册
+            }
         },
         //注册
         register: function () {
@@ -237,7 +249,6 @@ var loadingPage = new Vue({
         login: function () {
             _czc.push(﻿["_trackEvent",'login','点击','登录']);
         }
-
     }
 });
 

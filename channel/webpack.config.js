@@ -6,9 +6,9 @@ const path = require('path');
 const webpack = require('webpack');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
-
+const autoprefixer = require('autoprefixer');
 module.exports = {
-    entry: './public/script/main.js',
+    entry: ['./public/script/main.js'],
     output: {
         path: path.resolve('./public/script/'),
         filename: 'main.bundle.js'
@@ -65,7 +65,7 @@ module.exports = {
                 }
             }
         }),
-        new ExtractTextPlugin('[name].css'),
-        // new UglifyJSPlugin(),
+        new ExtractTextPlugin('./public/style.main.css'),
+        new UglifyJSPlugin(),
     ]
 };

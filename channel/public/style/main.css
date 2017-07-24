@@ -2,16 +2,18 @@
 *{margin: 0;padding: 0;}
 html{width: 100%;height: 100%;font-size: 100px;}
 body{
+    position: fixed;
     width: 100%;
-    height: 100%;
+    height: 12.03rem;
     text-align: center;
     font-family: "Helvetica Neue", Helvetica, Arial, "PingFang SC", "Hiragino Sans GB", "Heiti SC", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
-    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: hidden;
     font-size: 0.24rem;
 }
 a{text-decoration: none;-webkit-tap-highlight-color:rgba(0,0,0,0);}
 
-input{outline: none}
+input{outline: none;-webkit-appearance: none;-webkit-appearance:none;-webkit-tap-highlight-color:rgba(255,255,255,0)}
 input:focus{
     border: 0.02rem solid #ffc000;
     border-radius:0.10rem ;
@@ -55,28 +57,20 @@ input:focus{
     position: absolute;
     top: 8.34rem;
     left: 2.75rem;
+    transform: rotateY(30deg);
 }
-
-/*.animationHover{
-    -webkit-animation: hoverB 1.2s 1s ease both;
-}*/
-/*@-webkit-keyframes hoverB {*/
-    /*0%{-webkit-transform: scale(1)}*/
-    /*100%{-webkit-transform: scale(1.5)}*/
-/*}*/
-
 /*按钮的点击动画*/
 .animationButton{
-    -webkit-animation:flipOutY 1s .2s ease both;
+    animation:flipOutY 1s .2s ease both;
 }
-@-webkit-keyframes flipOutY{
-    0%{-webkit-transform:rotateY(0deg) scale3d(1,1,1) ;
+@keyframes flipOutY{
+    0%{transform:scale3d(1,1,1) rotateY(0deg) ;
         opacity:1}
-    10%{-webkit-transform:rotateY(0deg) scale3d(1.2, 1.2, 1.2) ;
+    10%{transform: scale3d(1.2, 1.2, 1.2) rotateY(0deg);
         opacity:1;}
-    80%{-webkit-transform: rotateY(360deg) scale3d(1.2, 1.2, 1.2) ;
+    80%{transform: scale3d(1.2, 1.2, 1.2) rotateY(360deg) ;
         opacity:1}
-    100%{-webkit-transform: rotateY(360deg) scale3d(1, 1, 1) ;
+    100%{transform:  scale3d(1, 1, 1) rotateY(360deg);
         opacity:1;}
 }
 
@@ -85,13 +79,12 @@ input:focus{
     animation: buttonInfinite 1s ease infinite;
 }
 @keyframes buttonInfinite {
-    0%{opacity: 1;transform: scale3d(0.9,0.9,0.9)}
-    100%{opacity: 0.9;transform: scale3d(1.1, 1.1, 1.1)}
+    0%{opacity: 1;transform:scale3d(0.9,0.9,0.9)}
+    100%{opacity: 0.9;transform:scale3d(1.1, 1.1, 1.1)}
 }
 /*页面的点击动画*/
 .animationPageUp{
     animation:pageUp 1.5s .2s ease both;
-    /*animation: pageUpFixed .2s 1.7s ease both;*/
 }
 
 @keyframes pageUp {
@@ -99,11 +92,6 @@ input:focus{
     20%{transform:translateY(0.2rem);-webkit-backface-visibility: hidden;}
     100%{transform:translateY(-12.03rem);;-webkit-backface-visibility: hidden;display: none}
 }
-
-/*@keyframes pageUpFixed {*/
-    /*0%{transform:translateY(-12.03rem);}*/
-    /*100%{transform:translateY(1.28rem);}*/
-/*}*/
 /*注册页面进来动画*/
 .animationRegisterUp{
     animation:registerUp 1s 0s ease both;
@@ -232,7 +220,6 @@ input:focus{
     position: relative;
     width: 7.50rem;
     height: 12.03rem;
-    /*margin-top: 1.28rem;*/
     overflow: hidden;
     background: url("../assets/get-red-bg@2x.png") no-repeat center;
     background-size: 7.50rem 12.03rem;
@@ -302,43 +289,23 @@ input:focus{
 }
 /*红包列表进入效果*/
 .animationRulesText{
-    -webkit-animation:bounceInText 1s .2s ease both;
-    -moz-animation:bounceInText 1s .2s ease both;}
-@-webkit-keyframes bounceInText{
+    animation:bounceInText 1s .2s ease both;}
+@keyframes bounceInText{
     0%{opacity:0;
-        -webkit-transform:scale(.3)}
+        transform:scale(.3)}
     50%{opacity:1;
-        -webkit-transform:scale(1.05)}
-    70%{-webkit-transform:scale(.9)}
-    100%{-webkit-transform:scale(1);}
+        transform:scale(1.05)}
+    70%{transform:scale(.9)}
+    100%{transform:scale(1);}
 }
-@-moz-keyframes bounceInText{
-    0%{opacity:0;
-        -moz-transform:scale(.3)}
-    50%{opacity:1;
-        -moz-transform:scale(1.05)}
-    70%{-moz-transform:scale(.9)}
-    100%{-moz-transform:scale(1)}
-}
-
-
 /*红包出去效果*/
 .animationRulesOutContent{
-    -webkit-animation:bounceOutContent 1s .2s ease both;
-    -moz-animation:bounceOutContent 1s .2s ease both;}
-@-webkit-keyframes bounceOutContent{
-    0%{-webkit-transform:scale(1);}
-    25%{-webkit-transform:scale(.95)}
+    animation:bounceOutContent 1s .2s ease both;}
+@keyframes bounceOutContent{
+    0%{transform:scale(1);}
+    25%{transform:scale(.95)}
     50%{opacity:1;
-        -webkit-transform:scale(1.1)}
+        transform:scale(1.1)}
     100%{opacity:0;
-        -webkit-transform:scale(.3);}
-}
-@-moz-keyframes bounceOutContent{
-    0%{-moz-transform:scale(1)}
-    25%{-moz-transform:scale(.95)}
-    50%{opacity:1;
-        -moz-transform:scale(1.1)}
-    100%{opacity:0;
-        -moz-transform:scale(.3)}
+        transform:scale(.3);}
 }

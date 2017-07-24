@@ -9,7 +9,12 @@
     <meta content="telephone=no,email=no" name="format-detection">
     <title>首页</title>
     <script src="https://s22.cnzz.com/z_stat.php?id=1262703831&web_id=1262703831" language="JavaScript"></script>
-    <link rel="stylesheet" href="style/main.css"/>
+    <script>
+        window.onload = function () {
+            _czc.push(﻿["_trackEvent",'page1','点击','page1']);
+        }
+    </script>
+    <link rel="stylesheet" href="style/main.min.css"/>
 </head>
 <body>
 <!--<div class="fixed-top">-->
@@ -45,20 +50,19 @@
                 </div>
                 <div class="agree-consent">
                     <span>注册即视为同意</span>
-                    <a href="#" v-on:click="serviceAgreement()">《服务协议》</a>
+                    <a href="https://www.qtz360.com/h5/html/regxy/index.html" v-on:click="serviceAgreement()">《服务协议》</a>
                 </div>
                 <a class="now-register" href="#" v-on:click="submitClick()"></a>
                 <p class="readyed-register">
                     <span>已经注册</span>
-                    <a href="#" v-on:click="login()">立即登录</a>
+                    <a href="https://www.qtz360.com/h5/home.html#/user/login" v-on:click="login()">立即登录</a>
                 </p>
             </div>
         </div>
     </div>
 </div>
-<script src="script/lib/autoSetRem.js"></script>
 <script src="script/lib/vue.min.js"></script>
-<script src="script/lib/vue-resource.js"></script>
-<script src="script/main.js"></script>
+<script src="script/lib/vue-resource.min.js"></script>
+<script src="script/main.bundle.js"></script>
 </body>
 </html>
