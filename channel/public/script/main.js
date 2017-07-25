@@ -21,14 +21,13 @@ var loadingPage = new Vue({
         isClick: false,  //点击在验证码
         isDuable: false,  //多次点击验证码
         clickColor: '#ffc000',   //点击按钮的颜色,
-        baseUrl: 'https://www.qtz360.com/api/rest/',   //测试url根路径
+        baseUrl: 'https://www.qtz360.com/api2.3/rest/',   //正式url根路径
         // baseUrl: 'https://www.qtz360.com/api/rest/',  //url跟路径
         phoneDisplay: 'none',
         checkDisplay: 'none',
         sn: '',  //渠道码
         channelId: '',  //渠道id
         channelCookie: ''  //渠道cookie
-
     },
     mounted: function () {
         this.$nextTick(function () {
