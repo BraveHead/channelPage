@@ -29,16 +29,11 @@ var loadingPage = new Vue({
         channelId: '',  //渠道id
         channelCookie: ''  //渠道cookie
     },
-    mounted: function () {
-        this.$nextTick(function () {
-            this.submitClick();
-        })
-    },
     created: function () {
 
     },
     methods: {
-        //首页红包按钮的点击页面上弹的判断
+       /* //首页红包按钮的点击页面上弹的判断
         buttonClick: function () {
             this.button = true;
             setTimeout(() => {
@@ -49,7 +44,7 @@ var loadingPage = new Vue({
             }, 1100);
             _czc.push(﻿["_trackEvent",'page2','点击','page2']);
             _czc.push(﻿["_trackEvent",'page1_button','点击','首页按钮']);
-        },
+        },*/
         //手机号码格式验证
         checkPhone: function (text) {
             let filter = /^1[3456789]\d{9}$/;

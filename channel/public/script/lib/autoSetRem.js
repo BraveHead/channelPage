@@ -10,7 +10,10 @@ var autoSetRem = (function (doc, win) {
                 paper = 750;
             }
             var clientWidth = docEl.clientWidth || win.innerWidth || screen.width;
-            if (clientWidth <= 320) {
+            if (clientWidth >= 1200) {
+                clientWidth = 750;
+            }
+            if(clientWidth <= 320){
                 clientWidth = 320;
             }
             if (!clientWidth) return;

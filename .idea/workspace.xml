@@ -2,9 +2,58 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8db038b9-c8c3-42f1-b980-1788765e108e" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/channelPc/public/assets/button_landing@2x.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/channelPc/public/assets/correct-icon@2x.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/channelPc/public/assets/down-app-button@2x.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/channelPc/public/assets/get-red-bg@2x.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/channelPc/public/assets/landing_page_bg.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/channelPc/public/assets/landing_page_bg.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/channelPc/public/assets/red-rule-list@2x.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/channelPc/public/assets/red-rules-but@2x.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/channelPc/public/assets/register-button.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/channelPc/public/assets/register_bg@2x.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/channelPc/public/assets/rule-black-bg@2x.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/channelPc/public/assets/rule-list-content@2x.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/channelPc/public/assets/x符号@2x.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/channelPc/public/style/assets/down-app-button@2x.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/channelPc/public/style/assets/get-red-bg@2x.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/channelPc/public/style/assets/landing_page_bg.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/channelPc/public/style/assets/red-rule-list@2x.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/channelPc/public/style/assets/red-rules-but@2x.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/channelPc/public/style/assets/register-button.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/channelPc/public/style/assets/register_bg@2x.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/channelPc/public/getRed.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/channelPc/public/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/channelPc/public/script/lib/autoSetRem.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/channelPc/public/script/lib/jquery-1.10.1.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/channelPc/public/script/lib/vue-resource.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/channelPc/public/script/lib/vue-resource.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/channelPc/public/script/lib/vue.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/channelPc/public/script/main.bundle.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/channelPc/public/script/main.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/channelPc/public/serverAgreement.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/channelPc/public/style/main.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/channelPc/public/style/main.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/channelPc/webpack.config.js" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/my-project/.babelrc" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/my-project/.gitignore" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/my-project/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/my-project/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/my-project/package.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/my-project/src/assets/landing_page_bg.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/my-project/src/script/lib/autoSetRem.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/my-project/src/script/lib/vue-resource.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/my-project/src/script/lib/vue.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/my-project/src/script/main.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/my-project/src/style/main.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/my-project/webpack.config.js" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/channel/public/getRed.html" afterPath="$PROJECT_DIR$/channel/public/getRed.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/channel/public/index.html" afterPath="$PROJECT_DIR$/channel/public/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/channel/public/script/lib/autoSetRem.js" afterPath="$PROJECT_DIR$/channel/public/script/lib/autoSetRem.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/channel/public/script/main.bundle.js" afterPath="$PROJECT_DIR$/channel/public/script/main.bundle.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/channel/public/script/main.js" afterPath="$PROJECT_DIR$/channel/public/script/main.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/channel/public/style/main.min.css" afterPath="$PROJECT_DIR$/channel/public/style/main.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/channel/public/serverAgreement.html" afterPath="$PROJECT_DIR$/channel/public/serverAgreement.html" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -17,12 +66,42 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="main.min.css" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/channel/public/style/main.min.css">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/channelPc/public/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="34" column="29" lean-forward="false" selection-start-line="34" selection-start-column="29" selection-end-line="34" selection-end-column="29" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="getRed.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/channelPc/public/getRed.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="26" column="40" lean-forward="true" selection-start-line="26" selection-start-column="40" selection-end-line="26" selection-end-column="40" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.css" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/channelPc/public/style/main.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1037">
+              <caret line="67" column="44" lean-forward="false" selection-start-line="67" selection-start-column="44" selection-end-line="67" selection-end-column="44" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="autoSetRem.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/channelPc/public/script/lib/autoSetRem.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="221">
+              <caret line="13" column="33" lean-forward="false" selection-start-line="13" selection-start-column="33" selection-end-line="13" selection-end-column="33" />
               <folding />
             </state>
           </provider>
@@ -41,11 +120,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>fixed-top</find>
-      <find>loading-page</find>
-      <find>landing-container</find>
-      <find>bottom</find>
-      <find>now-register</find>
       <find>input-container</find>
       <find>red-bg-container</find>
       <find>input-same</find>
@@ -71,6 +145,11 @@
       <find>button-red</find>
       <find>scale</find>
       <find>loading</find>
+      <find>channel</find>
+      <find>now-register</find>
+      <find>submitClick</find>
+      <find>#</find>
+      <find>https</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -92,15 +171,19 @@
         <option value="$PROJECT_DIR$/channel/.gitignore" />
         <option value="$PROJECT_DIR$/channel/public/webpack.config.js" />
         <option value="$PROJECT_DIR$/channel/package.json" />
-        <option value="$PROJECT_DIR$/channel/public/getRed.html" />
         <option value="$PROJECT_DIR$/channel/public/script/lib/autoSetRem.js" />
         <option value="$PROJECT_DIR$/channel/public/serverAgreement.html" />
         <option value="$PROJECT_DIR$/channel/public/script/main.bundle.js" />
         <option value="$PROJECT_DIR$/channel/public/style/main.css" />
         <option value="$PROJECT_DIR$/channel/webpack.config.js" />
-        <option value="$PROJECT_DIR$/channel/public/index.html" />
-        <option value="$PROJECT_DIR$/channel/public/script/main.js" />
         <option value="$PROJECT_DIR$/channel/public/style/main.min.css" />
+        <option value="$PROJECT_DIR$/channel/public/index.html" />
+        <option value="$PROJECT_DIR$/channel/public/getRed.html" />
+        <option value="$PROJECT_DIR$/channel/public/script/main.js" />
+        <option value="$PROJECT_DIR$/channelPc/package.json" />
+        <option value="$PROJECT_DIR$/channelPc/public/getRed.html" />
+        <option value="$PROJECT_DIR$/channelPc/public/script/lib/autoSetRem.js" />
+        <option value="$PROJECT_DIR$/channelPc/public/style/main.css" />
       </list>
     </option>
   </component>
@@ -119,7 +202,6 @@
   </component>
   <component name="NodeModulesDirectoryManager">
     <handled-path value="$PROJECT_DIR$/channel/node_modules" />
-    <handled-path value="$PROJECT_DIR$/my-project/node_modules" />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="1912" />
@@ -189,6 +271,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -199,41 +283,18 @@
             <path>
               <item name="channelPage" type="b2602c69:ProjectViewProjectNode" />
               <item name="channelPage" type="462c0819:PsiDirectoryNode" />
-              <item name="channel" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="channelPage" type="b2602c69:ProjectViewProjectNode" />
-              <item name="channelPage" type="462c0819:PsiDirectoryNode" />
-              <item name="channel" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="channelPage" type="b2602c69:ProjectViewProjectNode" />
-              <item name="channelPage" type="462c0819:PsiDirectoryNode" />
-              <item name="channel" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
-              <item name="style" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="channelPage" type="b2602c69:ProjectViewProjectNode" />
-              <item name="channelPage" type="462c0819:PsiDirectoryNode" />
-              <item name="channel" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
-              <item name="style" type="462c0819:PsiDirectoryNode" />
-              <item name="main.css" type="620a8d5e:NestingTreeNode" />
+              <item name="channelPc" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="settings.editor.selected.configurable" value="Settings.JavaScript" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/reg" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/channel" />
     <property name="nodejs_interpreter_path" value="C:/Program Files/nodejs/node" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
     <property name="JavaScriptPreferStrict" value="false" />
@@ -244,18 +305,18 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\github\channelPage\channelPc" />
+      <recent name="D:\github\channelPage\channelPc\public" />
+      <recent name="D:\github\channelPage\channel\public\script\lib" />
+      <recent name="D:\github\channelPage\channel\public\assets" />
+      <recent name="D:\github\channelPage\channel\public" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\github\channelPage\channel\public\style" />
       <recent name="D:\github\channelPage\channel" />
       <recent name="D:\github\channelPage\my-project\src\script" />
       <recent name="D:\github\channelPage\my-project\src\style" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\github\channelPage\channel\public\script\lib" />
-      <recent name="D:\github\channelPage\channel\public\assets" />
-      <recent name="D:\github\channelPage\channel\public" />
-      <recent name="D:\github\channelPage\channel" />
-      <recent name="D:\github\channelPage\my-project\src\assets" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -291,22 +352,30 @@
       <workItem from="1500822677031" duration="7070000" />
       <workItem from="1500858798224" duration="27877000" />
       <workItem from="1500944848415" duration="5105000" />
+      <workItem from="1501049084326" duration="5599000" />
+      <workItem from="1501063681796" duration="90000" />
+      <workItem from="1501118663380" duration="107000" />
+      <workItem from="1501119245908" duration="8000" />
+      <workItem from="1501119458269" duration="454000" />
+      <workItem from="1501120162072" duration="958000" />
+      <workItem from="1501121581036" duration="800000" />
+      <workItem from="1501231108857" duration="552000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="143006000" />
+    <option name="totallyTimeSpent" value="151574000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="-8" width="1382" height="744" extended-state="6" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2559524" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22693452" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.37397036" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31466228" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -318,6 +387,25 @@
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
+    <layout-to-restore>
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32784185" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="TypeScript" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32291666" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -330,76 +418,8 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/.gitignore" />
-    <entry file="file://$PROJECT_DIR$/my-project/README.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/my-project/dist/build.js.map">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-918">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="sourcemapFileViewerProvider">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/my-project/dist/build.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/my-project/src/App.vue" />
-    <entry file="file://$PROJECT_DIR$/my-project/dist/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="43" lean-forward="false" selection-start-line="8" selection-start-column="43" selection-end-line="8" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/my-project/src/script/lib/vue-resource.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/my-project/src/script/lib/autoSetRem.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="205">
-          <caret line="13" column="34" lean-forward="true" selection-start-line="13" selection-start-column="34" selection-end-line="13" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/my-project/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/my-project/src/style/main.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="14" lean-forward="true" selection-start-line="12" selection-start-column="14" selection-end-line="12" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/my-project/src/script/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/my-project/src/style/main.css" />
+    <entry file="file://$PROJECT_DIR$/my-project/src/script/main.js" />
     <entry file="file://$USER_HOME$/Desktop/渠道页/渠道注册——张顺/红包规则icon——靠边放@2x.png">
       <provider selected="true" editor-type-id="images">
         <state />
@@ -416,14 +436,7 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/my-project/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="123">
-          <caret line="11" column="9" lean-forward="false" selection-start-line="11" selection-start-column="9" selection-end-line="11" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/my-project/.gitignore" />
     <entry file="file://$PROJECT_DIR$/channel/public/assets/x符号@2x.png">
       <provider selected="true" editor-type-id="images">
         <state />
@@ -478,17 +491,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
           <caret line="13" column="4" lean-forward="false" selection-start-line="13" selection-start-column="4" selection-end-line="13" selection-end-column="4" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/my-project/.babelrc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="1" lean-forward="true" selection-start-line="0" selection-start-column="1" selection-end-line="0" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/my-project/.babelrc" />
     <entry file="file://$PROJECT_DIR$/channel/public/script/lib/jquery-1.10.1.min.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -496,29 +502,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/my-project/webpack.config.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="392">
-          <caret line="74" column="24" lean-forward="false" selection-start-line="74" selection-start-column="17" selection-end-line="74" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/channel/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="14" lean-forward="true" selection-start-line="11" selection-start-column="14" selection-end-line="11" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/my-project/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="4" lean-forward="false" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="76" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/my-project/webpack.config.js" />
+    <entry file="file://$PROJECT_DIR$/my-project/package.json" />
     <entry file="file://$PROJECT_DIR$/channel/public/style/assets/get-red-bg@2x.png">
       <provider selected="true" editor-type-id="images">
         <state />
@@ -551,7 +536,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1999">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -573,7 +557,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-424">
           <caret line="0" column="5472" lean-forward="false" selection-start-line="0" selection-start-column="5472" selection-end-line="0" selection-end-column="5472" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -591,48 +574,95 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/channel/public/getRed.html">
+    <entry file="file://$PROJECT_DIR$/channel/main.min.css" />
+    <entry file="file://$USER_HOME$/Desktop/渠道页/打包/public/script/main.js" />
+    <entry file="file://$USER_HOME$/Desktop/渠道页/打包/public/script/main.bundle.js" />
+    <entry file="file://$PROJECT_DIR$/channel/public/style/main.min.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="37" lean-forward="false" selection-start-line="12" selection-start-column="37" selection-end-line="12" selection-end-column="37" />
+        <state relative-caret-position="170">
+          <caret line="34" column="29" lean-forward="false" selection-start-line="34" selection-start-column="29" selection-end-line="34" selection-end-column="29" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/channel/main.min.css" />
-    <entry file="file://$USER_HOME$/Desktop/渠道页/打包/public/script/main.js">
+    <entry file="file://$PROJECT_DIR$/my-project/src/script/lib/vue-resource.js" />
+    <entry file="file://$PROJECT_DIR$/my-project/README.md" />
+    <entry file="file://$PROJECT_DIR$/channel/public/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
-          <caret line="6" column="11" lean-forward="true" selection-start-line="6" selection-start-column="11" selection-end-line="6" selection-end-column="11" />
+          <caret line="56" column="37" lean-forward="false" selection-start-line="56" selection-start-column="37" selection-end-line="56" selection-end-column="37" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Desktop/渠道页/打包/public/script/main.bundle.js">
+    <entry file="file://$PROJECT_DIR$/channel/public/script/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="227" column="35" lean-forward="false" selection-start-line="227" selection-start-column="35" selection-end-line="227" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/channel/public/getRed.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="31" lean-forward="false" selection-start-line="18" selection-start-column="31" selection-end-line="18" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/channel/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="16" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/channelPc/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="48" column="0" lean-forward="false" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/channelPc/webpack.config.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/channel/public/script/main.js">
+    <entry file="file://$PROJECT_DIR$/channelPc/public/serverAgreement.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1173">
-          <caret line="252" column="0" lean-forward="true" selection-start-line="252" selection-start-column="0" selection-end-line="252" selection-end-column="0" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/channelPc/public/script/lib/autoSetRem.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="33" lean-forward="false" selection-start-line="13" selection-start-column="33" selection-end-line="13" selection-end-column="33" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/channel/public/index.html">
+    <entry file="file://$PROJECT_DIR$/channelPc/public/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="9" lean-forward="true" selection-start-line="14" selection-start-column="9" selection-end-line="14" selection-end-column="9" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/channel/public/style/main.min.css">
+    <entry file="file://$PROJECT_DIR$/channelPc/public/getRed.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="34" column="29" lean-forward="false" selection-start-line="34" selection-start-column="29" selection-end-line="34" selection-end-column="29" />
+        <state relative-caret-position="136">
+          <caret line="26" column="40" lean-forward="true" selection-start-line="26" selection-start-column="40" selection-end-line="26" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/channelPc/public/style/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1037">
+          <caret line="67" column="44" lean-forward="false" selection-start-line="67" selection-start-column="44" selection-end-line="67" selection-end-column="44" />
           <folding />
         </state>
       </provider>

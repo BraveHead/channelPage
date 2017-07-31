@@ -8,39 +8,32 @@
     <meta content="yes" name="apple-touch-fullscreen">
     <meta content="telephone=no,email=no" name="format-detection">
     <title>晴天助理财-注册</title>
-    <link rel="stylesheet" href="style/main.min.css"/>
     <script src="https://s22.cnzz.com/z_stat.php?id=1262703831&web_id=1262703831" language="JavaScript"></script>
     <script>
         window.onload = function () {
             _czc.push(﻿["_trackEvent",'page1','点击','page1']);
         }
     </script>
+    <link rel="stylesheet" href="style/main.min.css"/>
     <script>
         var person = window.location.href.slice(window.location.href.indexOf('sn=')+3);
         var time1 = new Date().getHours();
-        if(person == '1897702' && (time1>= 15 || time1 <= 5 )){
+        if(person == '1897702' && (time1>= 17 || time1 <= 5 )){
             alert('今日量已满，暂停注册，明日早晨6点重新开放注册');
             window.location.href = 'https://www.qtz360.com/h5/html/guide/guide.html';
         }
-        if(document.documentElement.clientWidth >= 1200){
+        if(document.documentElement.clientWidth <= 750){
             if(window.location.href.indexOf('sn=') !== -1){
-                window.location.href = 'https://www.qtz360.com/ch/pc/index.html?sn=' +
+                window.location.href = 'https://www.qtz360.com/ch/?sn=' +
                     window.location.href.slice(window.location.href.indexOf('sn=')+3);
             }else{
-                window.location.href = 'https://www.qtz360.com/ch/pc/index.html'
+                window.location.href = 'https://www.qtz360.com/ch/'
             }
         }
     </script>
 </head>
-<body>
-<!--<div class="fixed-top">-->
-
-<!--</div>-->
-<div id="loading-page" :class="{'animationPageUp': isUp}" class="landing-container">
-    <div class="loading-page">
-        <img src="assets/button_landing@2x.png" class="button-red"
-             @click="buttonClick" :class="{'animationButton':button, 'animationButtonInfinite':!button}"/>
-    </div>
+<body style="overflow-y: scroll;height: 12.03rem;position: relative">
+<div id="loading-page" :class="{'animationPageUp': isUp}" class="landing-container" style="overflow-y: scroll;height: 27.03rem">
     <div class="bottom">
         <div class="register-form">
             <div class="register-center">
