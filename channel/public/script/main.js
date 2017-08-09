@@ -1,4 +1,4 @@
-
+﻿
 import './lib/autoSetRem'
 document.querySelector('a').style.display = 'none';
 Vue.http.options.emulateJSON = true;
@@ -223,7 +223,7 @@ var loadingPage = new Vue({
             }).then(function (res) {
                 switch (res.data.rcd){
                     case 'R0001':
-                        window.location.href = "/ch/getRed.html";
+              monitor.request({type:"post",url:monitor.data_url,data:monitor.url_parameter});          window.location.href = "/ch/getRed.html";
                         break;
                     case 'M0008_2':
                         this.phoneDisplay = 'block';

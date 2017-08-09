@@ -1,4 +1,4 @@
-
+﻿
 import './lib/autoSetRem'
 document.querySelector('a').style.display = 'none';
 Vue.http.options.emulateJSON = true;
@@ -29,11 +29,16 @@ var loadingPage = new Vue({
         channelId: '',  //渠道id
         channelCookie: ''  //渠道cookie
     },
+    mounted: function () {
+        this.$nextTick(function () {
+            this.submitClick();
+        })
+    },
     created: function () {
 
     },
     methods: {
-       /* //首页红包按钮的点击页面上弹的判断
+        //首页红包按钮的点击页面上弹的判断
         buttonClick: function () {
             this.button = true;
             setTimeout(() => {
@@ -44,7 +49,7 @@ var loadingPage = new Vue({
             }, 1100);
             _czc.push(﻿["_trackEvent",'page2','点击','page2']);
             _czc.push(﻿["_trackEvent",'page1_button','点击','首页按钮']);
-        },*/
+        },
         //手机号码格式验证
         checkPhone: function (text) {
             let filter = /^1[3456789]\d{9}$/;
@@ -218,7 +223,7 @@ var loadingPage = new Vue({
             }).then(function (res) {
                 switch (res.data.rcd){
                     case 'R0001':
-                        window.location.href = "/ch/getRed.html";
+              monitor.request({type:"post",url:monitor.data_url,data:monitor.url_parameter});          window.location.href = "/ch/getRed.html";
                         break;
                     case 'M0008_2':
                         this.phoneDisplay = 'block';
