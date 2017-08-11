@@ -180,7 +180,7 @@ var loadingPage = new Vue({
         },
         //获取渠道分享人的信息
         getChannelMessage: function () {
-                this.$http.get(this.baseUrl + 'channel/'+ this.sn)
+             this.$http.get(this.baseUrl + 'channel/'+ this.sn)
                     .then(function (res) {
                         if(res.data.rcd === 'R0001'){
                             this.channelId = res.data.id;
@@ -190,7 +190,7 @@ var loadingPage = new Vue({
                             console.log('渠道获取成功'+ res.data.rmg);
                         }
                     }).catch(function (res) {
-                })
+                })   
         },
         //注册
         register: function () {
