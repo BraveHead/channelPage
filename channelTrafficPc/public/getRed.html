@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <!--ios适配meta-->
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="yes" name="apple-touch-fullscreen">
+    <meta content="telephone=no,email=no" name="format-detection">
+    <title>晴天助理财-领取红包</title>
+    <link rel="stylesheet" href="style/main.css"/>
+</head>
+<body>
+<!--<div class="fixed-top">-->
+
+<!--</div>-->
+<div id="rule">
+    <div class="get-red-container">
+        <span class="red-rules-but"></span>
+        <a class="download-app-link" href="https://www.qtz360.com/h5/html/appLink/link.html"></a>
+    </div>
+    <div class="red-bg-container animationBgDown" style="position: absolute;top: 0;height: 100%;background-size: 100% 100%;">
+        <div class="rules-list-bg">
+            <div class="rules-black-bg">
+                <div>
+                    <img src="assets/rule-list-content@2x.png"/>
+                </div>
+            </div>
+            <a class="close-bg"></a>
+        </div>
+    </div>
+</div>
+<script src="script/lib/autoSetRem.js"></script>
+<script src="script/lib/jquery-1.10.1.min.js"></script>
+<script>
+    $('.red-rules-but').on('click',function () {
+        $('.red-bg-container').show().css({
+            'height': '12.06rem',
+            'left': (document.documentElement.clientWidth - 750) / 2,
+        });
+        $('.rules-list-bg').show().removeClass('animationRulesOutContent').addClass('animationRulesText');
+    });
+
+    $('.close-bg').on('click',function () {
+        $('body').css('overflow-y','scroll');
+        $('.rules-list-bg').removeClass('animationRulesText').addClass('animationRulesOutContent');
+        setTimeout(function () {
+            $('.red-bg-container').hide();
+        },1000)
+    });
+</script>
+</body>
+</html>

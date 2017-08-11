@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <!--ios适配meta-->
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="yes" name="apple-touch-fullscreen">
+    <meta content="telephone=no,email=no" name="format-detection">
+    <title>晴天助理财-领取红包</title>
+    <link rel="stylesheet" href="style/main.css"/>
+    <script src="https://s22.cnzz.com/z_stat.php?id=1262703831&web_id=1262703831" language="JavaScript"></script>
+    <script>
+        window.onload = function () {
+            _czc.push(﻿["_trackEvent",'page3','点击','page3']);
+        }
+    </script>
+</head>
+<body>
+<!--<div class="fixed-top">-->
+
+<!--</div>-->
+<div id="rule">
+    <div class="get-red-container">
+        <span class="red-rules-but"></span>
+        <a class="download-app-link" href="https://www.qtz360.com/h5/html/appLink/link.html"></a>
+    </div>
+    <div class="red-bg-container animationBgDown" style="position: absolute;top: 0;height: 100%;background-size: 100% 100%;">
+        <div class="rules-list-bg">
+            <div class="rules-black-bg">
+                <div>
+                    <img src="assets/rule-list-content@2x.png"/>
+                </div>
+            </div>
+            <a class="close-bg"></a>
+        </div>
+    </div>
+</div>
+<script src="script/lib/autoSetRem.js"></script>
+<script src="script/lib/jquery-1.10.1.min.js"></script>
+<script>
+    document.querySelector('a').style.display = 'none';
+    $('.red-rules-but').on('click',function () {
+//        $('body').css('overflow-y','hidden');
+        console.log( '>>>');
+        $('.red-bg-container').show().css('height', $('body').height());
+        $('.rules-list-bg').show().removeClass('animationRulesOutContent').addClass('animationRulesText');
+        _czc.push(﻿["_trackEvent",'red_rule','点击','红包规则']);
+    });
+
+    $('.close-bg').on('click',function () {
+        $('body').css('overflow-y','scroll');
+//        $('.red-bg-container').hide();
+        $('.rules-list-bg').removeClass('animationRulesText').addClass('animationRulesOutContent');
+        setTimeout(function () {
+            $('.red-bg-container').hide();
+        },1000)
+    });
+    $('.download-app-link').on('click', function () {
+        _czc.push(﻿["_trackEvent",'download','点击','下载']);
+    })
+</script>
+</body>
+</html>

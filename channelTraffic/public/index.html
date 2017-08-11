@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <!--ios适配meta-->
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="yes" name="apple-touch-fullscreen">
+    <meta content="telephone=no,email=no" name="format-detection">
+    <title>晴天助理财-注册</title>
+    <link rel="stylesheet" href="style/main.css"/>
+</head>
+<body style="overflow: hidden">
+<div id="loading-page" :class="{'animationPageUp': isUp}" class="landing-container">
+    <div class="loading-page">
+        <img src="assets/landing-red.png" class="landing-red"/>
+        <img src="assets/button_landing@2x.png" class="button-red"
+             @click="buttonClick" :class="{'animationButton':button, 'animationButtonInfinite':!button}"/>
+    </div>
+    <script>
+        if(document.documentElement.clientWidth >= 1200){
+           alert('请在手机上领取红包');
+        }
+    </script>
+    <div class="bottom">
+        <img src="assets/traffic_bg1.jpg" class="traffic_register_bg"/>
+        <span class="red-rules-but" style="top: 0.69rem"></span>
+        <img src="assets/traffic_bg2.jpg" class="traffic_register_bg"/>
+        <img src="assets/traffic_bg3.jpg" class="traffic_register_bg"/>
+        <img src="assets/traffic_bg4.jpg" class="traffic_register_bg"/>
+        <div class="traffic_from">
+            <div class="register-form">
+                <div class="register-center">
+                    <p class="qtz-promise">* 晴天助承诺不会泄露您手机号</p>
+                    <div class="input-container" style="margin-top: 0">
+                        <input placeholder="请输入手机号" class="input-same"
+                               type="text" v-model="phoneNumber" v-on:blur="checkPhone(phoneNumber)"/>
+                        <img src="assets/correct-icon@2x.png" v-show="checkPhone(phoneNumber)"/>
+                        <p v-show="phoneNumShow" v-bind:style="{'display': phoneDisplay}">{{phoneTitle}}</p>
+                    </div>
+                    <div class="input-container">
+                        <input placeholder="请设置8~20位数字与字母组合密码" class="input-same"
+                               type="password" v-model="passwordText" v-on:blur="checkPassword(passwordText)"/>
+                        <img src="assets/correct-icon@2x.png" v-show="checkPassword(passwordText)"/>
+                        <p v-show="passwordShow">{{passwordTitle}}</p>
+                    </div>
+                    <div class="input-container">
+                        <input placeholder="短信验证码" class="input-same"
+                               type="text" v-model="checkNumberText" v-on:blur="checkWord(checkNumberText)"/>
+                        <img src="assets/correct-icon@2x.png" style="right: 1.97rem" v-show="checkWord(checkNumberText)"/>
+                        <a class="get-check" v-on:click="isPhoneExistence()" v-bind:style="{'color':clickColor}">{{getCheckWordButton}}</a>
+                        <p v-show="checkShow" v-bind:style="{'display':checkDisplay}">{{checkWordTitle}}</p>
+                    </div>
+                    <div class="agree-consent">
+                        <span>注册即视为同意</span>
+                        <a href="https://www.qtz360.com/h5/html/regxy/index.html" v-on:click="serviceAgreement()">《服务协议》</a>
+                    </div>
+                    <a class="now-register"  v-on:click="submitClick()"></a>
+                    <p class="readyed-register">
+                        <span>已经注册</span>
+                        <a href="https://www.qtz360.com/h5/home.html#/user/login" v-on:click="login()">立即登录</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="red-bg-container animationBgDown">
+        <div class="rules-list-bg">
+            <div class="rules-black-bg">
+                <div>
+                    <img src="assets/rule-list-content@2x.png"/>
+                </div>
+            </div>
+            <a class="close-bg"></a>
+        </div>
+    </div>
+</div>
+<script src="script/lib/vue.min.js"></script>
+<script src="script/lib/vue-resource.min.js"></script>
+<script src="script/lib/autoSetRem.js"></script>
+<script src="script/main.js"></script>
+<script src="script/lib/jquery-1.10.1.min.js"></script>
+<script>
+    $('.red-rules-but').on('click',function () {
+        $('body').css('overflow-y','hidden');
+        $('.bottom').css('position','fixed');
+        $('.red-bg-container').show();
+        $('.rules-list-bg').show().removeClass('animationRulesOutContent').addClass('animationRulesText');
+    });
+    $('.close-bg').on('click',function () {
+        $('body').css('overflow-y','scroll');
+        $('.bottom').css('position','relative');
+        $('.rules-list-bg').removeClass('animationRulesText').addClass('animationRulesOutContent');
+        setTimeout(function () {
+            $('.red-bg-container').hide();
+        },1000)
+    });
+</script>
+</body>
+</html>
