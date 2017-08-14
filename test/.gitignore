@@ -1,5 +1,5 @@
 .DS_Store
-#node_modules/
+n
 *.xml;
 
 npm-debug.log
@@ -7,7 +7,6 @@ yarn-error.log
 
 # Editor directories and files
 .idea
-node_modules
 *.suo
 *.ntvs*
 *.njsproj

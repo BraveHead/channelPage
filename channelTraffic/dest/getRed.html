@@ -8,15 +8,12 @@
     <meta content="yes" name="apple-touch-fullscreen">
     <meta content="telephone=no,email=no" name="format-detection">
     <title>油卡大放送</title>
-    <link rel="stylesheet" href="style/main.css"/>
+    <link rel="stylesheet" href="style/main.min.css"/>
 </head>
 <body>
-<!--<div class="fixed-top">-->
-
-<!--</div>-->
 <div id="rule">
     <div class="get-red-container">
-        <span class="red-rules-but"></span>
+        <span class="red-rules-but" style="top: 0"></span>
         <a class="download-app-link" href="http://appurl.me/15758696"></a>
     </div>
     <div class="red-bg-container animationBgDown" style="position: absolute;top: 0;height: 100%;background-size: 100% 100%;">
@@ -34,15 +31,15 @@
 <script src="script/lib/jquery-1.10.1.min.js"></script>
 <script>
     $('.red-rules-but').on('click',function () {
-        $('.red-bg-container').show().css({
-            'height': '12.06rem',
-            'left': (document.documentElement.clientWidth - 750) / 2,
-        });
+//        $('body').css('overflow-y','hidden');
+        $('.red-bg-container').show().css('height', $('body').height());
         $('.rules-list-bg').show().removeClass('animationRulesOutContent').addClass('animationRulesText');
+        _czc.push(﻿["_trackEvent",'red_rule','点击','红包规则']);
     });
 
     $('.close-bg').on('click',function () {
         $('body').css('overflow-y','scroll');
+//        $('.red-bg-container').hide();
         $('.rules-list-bg').removeClass('animationRulesText').addClass('animationRulesOutContent');
         setTimeout(function () {
             $('.red-bg-container').hide();

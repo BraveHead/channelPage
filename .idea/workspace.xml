@@ -2,12 +2,26 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8db038b9-c8c3-42f1-b980-1788765e108e" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/vagrant.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/watcherTasks.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/channelTraffic/public/style/assets/down-app-button@2x.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/channelTraffic/public/style/assets/get-red-bg@2x.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/channelTraffic/public/style/assets/red-rule-list@2x.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/channelTraffic/public/style/assets/red-rules-but@2x.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/channelTraffic/public/style/assets/register-button.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/channelTraffic/public/style/assets/register_bg@2x.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/channelTraffic/public/style/main.min.css" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/channelTraffic/public/assets/button_landing@2x.png" afterPath="$PROJECT_DIR$/channelTraffic/public/assets/button_landing@2x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/channelTraffic/public/assets/landing-red.png" afterPath="$PROJECT_DIR$/channelTraffic/public/assets/landing-red.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/channelTraffic/public/assets/landing_page_bg.png" afterPath="$PROJECT_DIR$/channelTraffic/public/assets/landing_page_bg.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/channelTraffic/package.json" afterPath="$PROJECT_DIR$/channelTraffic/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/channelTraffic/public/getRed.html" afterPath="$PROJECT_DIR$/channelTraffic/public/getRed.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/channelTraffic/public/index.html" afterPath="$PROJECT_DIR$/channelTraffic/public/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/channelTraffic/public/script/main.bundle.js" afterPath="$PROJECT_DIR$/channelTraffic/public/script/main.bundle.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/channelTraffic/public/script/main.js" afterPath="$PROJECT_DIR$/channelTraffic/public/script/main.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/channelTraffic/public/style/main.css" afterPath="$PROJECT_DIR$/channelTraffic/public/style/main.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/channelTraffic/webpack.config.js" afterPath="$PROJECT_DIR$/channelTraffic/webpack.config.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/channelTrafficPc/public/getRed.html" afterPath="$PROJECT_DIR$/channelTrafficPc/public/getRed.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/channelTrafficPc/public/index.html" afterPath="$PROJECT_DIR$/channelTrafficPc/public/index.html" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -20,7 +34,18 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file leaf-file-name="webpack.config.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/channel/webpack.config.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="94">
+              <caret line="43" column="19" lean-forward="true" selection-start-line="43" selection-start-column="19" selection-end-line="43" selection-end-column="19" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -119,8 +144,8 @@
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
-    <option name="width" value="1382" />
-    <option name="height" value="744" />
+    <option name="width" value="1936" />
+    <option name="height" value="1056" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -184,7 +209,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -192,11 +217,16 @@
               <item name="channelPage" type="b2602c69:ProjectViewProjectNode" />
               <item name="channelPage" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="channelPage" type="b2602c69:ProjectViewProjectNode" />
+              <item name="channelPage" type="462c0819:PsiDirectoryNode" />
+              <item name="channelPc" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -271,11 +301,12 @@
       <workItem from="1502246380038" duration="155000" />
       <workItem from="1502337268185" duration="915000" />
       <workItem from="1502344437071" duration="285000" />
+      <workItem from="1502445131213" duration="634000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="152929000" />
+    <option name="totallyTimeSpent" value="153563000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -283,12 +314,12 @@
       <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16069546" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2328618" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -523,24 +554,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/channelPc/webpack.config.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/channelPc/public/serverAgreement.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/channel/webpack.config.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1071">
-          <caret line="63" column="21" lean-forward="true" selection-start-line="63" selection-start-column="21" selection-end-line="63" selection-end-column="21" />
         </state>
       </provider>
     </entry>
@@ -583,6 +600,22 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="4" column="13" lean-forward="true" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/channelPc/webpack.config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="13" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="70" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/channel/webpack.config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="94">
+          <caret line="43" column="19" lean-forward="true" selection-start-line="43" selection-start-column="19" selection-end-line="43" selection-end-column="19" />
+          <folding />
         </state>
       </provider>
     </entry>

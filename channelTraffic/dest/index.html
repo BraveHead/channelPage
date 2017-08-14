@@ -8,21 +8,19 @@
     <meta content="yes" name="apple-touch-fullscreen">
     <meta content="telephone=no,email=no" name="format-detection">
     <title>油卡大放送</title>
-    <link rel="stylesheet" href="style/main.css"/>
+    <link rel="stylesheet" href="style/main.min.css"/>
 </head>
 <body>
 <div id="loading-page" :class="{'animationPageUp': isUp}" class="landing-container">
-    <!-- <div class="loading-page">
-        <img src="assets/landing-red.png" class="landing-red"/>
-        <img src="assets/button_landing@2x.png" class="button-red"
-             @click="buttonClick" :class="{'animationButton':button, 'animationButtonInfinite':!button}"/>
-    </div> -->
+    <!--<div class="loading-page">-->
+        <!--<img src="assets/landing-red.png" class="landing-red"/>-->
+        <!--<img src="assets/button_landing@2x.png" class="button-red"-->
+             <!--@click="buttonClick" :class="{'animationButton':button, 'animationButtonInfinite':!button}"/>-->
+    <!--</div>-->
     <div class="bottom">
         <img src="assets/traffic_bg1.jpg" class="traffic_register_bg"/>
-        <span class="red-rules-but" style="top: 0.69rem"></span>
+        <span class="red-rules-but"></span>
         <img src="assets/traffic_bg2.jpg" class="traffic_register_bg"/>
-        <img src="assets/traffic_bg3.jpg" class="traffic_register_bg"/>
-        <img src="assets/traffic_bg4.jpg" class="traffic_register_bg"/>
         <div class="traffic_from">
             <div class="register-form">
                 <div class="register-center">
@@ -58,6 +56,8 @@
                 </div>
             </div>
         </div>
+        <img src="assets/traffic_bg3.jpg" class="traffic_register_bg"/>
+        <img src="assets/traffic_bg4.jpg" class="traffic_register_bg"/>
     </div>
     <div class="red-bg-container animationBgDown">
         <div class="rules-list-bg">
@@ -72,19 +72,18 @@
 </div>
 <script src="script/lib/vue.min.js"></script>
 <script src="script/lib/vue-resource.min.js"></script>
-<script src="script/lib/autoSetRem.js"></script>
-<script src="script/main.js"></script>
 <script src="script/lib/jquery-1.10.1.min.js"></script>
+<script src="script/main.js"></script>
 <script>
     $('.red-rules-but').on('click',function () {
         $('body').css('overflow-y','hidden');
-        // $('.bottom').css('position','fixed');
-        $('.red-bg-container').show().css('left',(document.documentElement.clientWidth - 750)/2 );
+        $('.bottom').css('position','fixed');
+        $('.red-bg-container').show();
         $('.rules-list-bg').show().removeClass('animationRulesOutContent').addClass('animationRulesText');
     });
     $('.close-bg').on('click',function () {
         $('body').css('overflow-y','scroll');
-        // $('.bottom').css('position','relative');
+        $('.bottom').css('position','relative');
         $('.rules-list-bg').removeClass('animationRulesText').addClass('animationRulesOutContent');
         setTimeout(function () {
             $('.red-bg-container').hide();
