@@ -24,6 +24,7 @@ var loadingPage = new Vue({
         phoneDisplay: 'none',
         checkDisplay: 'none',
         sn: 8268262,  //渠道码
+        // sn:6431961,  //测试渠道码
         channelId: '',  //渠道id
         channelCookie: ''  //渠道cookie
     },
@@ -45,6 +46,8 @@ var loadingPage = new Vue({
                 document.querySelector('body').style.overflowY = 'scroll';
                 document.querySelector('body').style.position = 'relative'
             }, 1100);
+            _czc.push(﻿["_trackEvent",'page2','点击','page2']);
+            _czc.push(﻿["_trackEvent",'page1_button','点击','首页按钮']);
         },
         //手机号码格式验证
         checkPhone: function (text) {
@@ -52,6 +55,7 @@ var loadingPage = new Vue({
             if((filter.test(text))) {
                 this.phoneNumShow = false;
             }
+            _czc.push(﻿["_trackEvent",'phone','点击','手机号']);
             return (/^1[34578]\d{9}$/.test(text));
         },
         //8-20位数字和字母的密码格式验证
@@ -60,6 +64,7 @@ var loadingPage = new Vue({
             if(filter.test(text)){
                 this.passwordShow = false;
             }
+            _czc.push(﻿["_trackEvent",'password','点击','密码']);
             return (filter.test(text));
         },
         //6位验证码的格式验证
@@ -68,6 +73,7 @@ var loadingPage = new Vue({
             if(filter.test(text)){
                 this.checkShow = false;
             }
+            _czc.push(﻿["_trackEvent",'verification code','点击','输入验证码']);
             return filter.test(text);
         },
         //获取验证码后样式改变
@@ -134,6 +140,7 @@ var loadingPage = new Vue({
                     },200)
                 },1000)
             }
+            _czc.push(﻿["_trackEvent",'register','点击','注册']);
         },
         //验证手机号是否注册
         isPhoneExistence: function () {
@@ -162,6 +169,8 @@ var loadingPage = new Vue({
                     this.phoneNumShow = false;
                 },1000)
             }
+
+            _czc.push(﻿["_trackEvent",'words','点击','验证码']);
         },
         //获取验证码
         getPhoneCheckCode: function () {
@@ -203,7 +212,7 @@ var loadingPage = new Vue({
             }).then(function (res) {
                 switch (res.data.rcd){
                     case 'R0001':
-                        window.location.href = "/ch/getRed.html";
+                        window.location.href = "https://www.qtz360.com/ch/918/getRed.html";
                         break;
                     case 'M0008_2':
                         this.phoneDisplay = 'block';
@@ -226,10 +235,10 @@ var loadingPage = new Vue({
             })
         },
         serviceAgreement: function () {
-
+            _czc.push(﻿["_trackEvent",'agreement','点击','协议']);
         },
         login: function () {
-
+            _czc.push(﻿["_trackEvent",'login','点击','登录']);
         }
     }
 });
