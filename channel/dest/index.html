@@ -18,7 +18,7 @@
     <script>
         var person = window.location.href.slice(window.location.href.indexOf('sn=')+3);
         var time1 = new Date().getHours();
-        if(person == '1897702' && (time1>= 20 || time1 <= 5 )){
+        if(person == '1897702' && (time1>= 18 || time1 <= 5 )){
             alert('今日量已满，暂停注册，明日早晨6点重新开放注册');
             window.location.href = 'https://www.qtz360.com/h5/html/guide/guide.html';
         }
