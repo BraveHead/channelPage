@@ -18,7 +18,7 @@
     <script>
         var person = window.location.href.slice(window.location.href.indexOf('sn=')+3);
         var time1 = new Date().getHours();
-        if(person == '1897702' && (time1>= 18 || time1 <= 5 )){
+        if(person == '1897702' && (time1>= 17 || time1 <= 5 )){
             alert('今日量已满，暂停注册，明日早晨6点重新开放注册');
             window.location.href = 'https://www.qtz360.com/h5/html/guide/guide.html';
         }
@@ -94,6 +94,10 @@
                     <a href="https://www.qtz360.com/h5/home.html#/user/login" v-on:click="login()">立即登录</a>
                 </p>
             </div>
+        </div>
+        <div class="bottom-title" style="position: absolute;bottom: 0;height: 0.80rem;text-align: center;line-height: 0.40rem;width: 100%;font-size: 0.24rem;color: #494949;">
+            <p>浙江中浙互联网金融信息服务有限公司</p>
+            <p>市场有风险，投资需谨慎</p>
         </div>
     </div>
     <div class="red-bg-container animationBgDown">
