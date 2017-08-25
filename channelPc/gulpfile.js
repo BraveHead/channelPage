@@ -25,16 +25,18 @@ var gutil = require("gulp-util");
 var browserifyShim = require("browserify-shim");
 var browserslist = require('browserslist');
 var salad = require('postcss-salad');
+var DEST = './dest2.3';
+var SRC= './src2.3';
 // 静态服务器 + 监听 scss/html/js/images 文件
 gulp.task('serve', ['css', "copyHtml", "copyJs", "buildJs", "images"], function () {
     browserSync.init({
-        server: "./dest",
+        server: DEST,
         ghostMode: false,   //禁止多设备联动
     });
-    gulp.watch("src/assets/(*.png|*.jpg|*.svg)", ['images']);
-    gulp.watch("src/style/*.css", ['css']);
-    gulp.watch("src/*.html", ['copyHtml']);
-    gulp.watch("src/script/*.js", ['buildJs']);
+    gulp.watch(SRC +"/assets/(*.png|*.jpg|*.svg)", ['images']);
+    gulp.watch(SRC + "/style/*.css", ['css']);
+    gulp.watch(SRC + "src/*.html", ['copyHtml']);
+    gulp.watch(SRC + "src/script/*.js", ['buildJs']);
 });
 
 // 编译压缩css 输出到目标目录
@@ -44,21 +46,21 @@ gulp.task('css', function () {
         cssnext,
         precss
     ];
-    gulp.src(['src/style/*.css'])  //,'src/public/scss/*.scss'
+    gulp.src([SRC + '/style/*.min.css'])  //,'src/public/scss/*.scss'
         .pipe(sourcemaps.init())
         .pipe(postcss([
             salad({browsers: browserslist('last 5 version, > 0.1%')})
         ]))
         .pipe(minifycss())
-        .pipe(rename({suffix:'.min'}))
+        // .pipe(rename({suffix:'.min'}))
         .pipe(sourcemaps.write())
-        .pipe(gulp.dest('dest/style/'))
+        .pipe(gulp.dest(DEST + '/style/'))
         .pipe(browserSync.reload({stream: true}));
 });
 
 // 图片压缩  输出到目标目录
 gulp.task('images', function () {
-    gulp.src(['src/assets/*.{png,jpg,gif,ico,svg}'])
+    gulp.src([SRC + '/assets/*.{png,jpg,gif,ico,svg}'])
         .pipe(cache(imagemin({
             optimizationLevel: 5,
             interlaced: true,
@@ -66,25 +68,25 @@ gulp.task('images', function () {
             svgoPlugins: [{removeViewBox: true}], //不要移除svg的viewbox属性
             use: [pngquant()]   //使用pngquant深度压缩png图片
         })))
-        .pipe(gulp.dest('dest/assets'))
+        .pipe(gulp.dest(DEST + '/assets'))
         .pipe(browserSync.reload({stream: true}));
 });
 
 // 拷贝 html
 gulp.task('copyHtml', function () {
-    gulp.src(['src/*.html'])
+    gulp.src([SRC + '/*.html'])
         .pipe(contentIncluder({
             includerReg: /<!\-\-include\s+"([^"]+)"\-\->/g
         }))
         .pipe(rev())
-        .pipe(gulp.dest('dest/'))
+        .pipe(gulp.dest(DEST+ '/'))
         .pipe(browserSync.reload({stream: true}));
 });
 
 // 拷贝 public下面的共有js库和文件
 gulp.task('copyJs', function () {
-    gulp.src(['src/script/lib/*'])
-        .pipe(gulp.dest('dest/script/lib'))
+    gulp.src([SRC + '/script/lib/*'])
+        .pipe(gulp.dest(DEST + '/script/lib'))
         .pipe(browserSync.reload({stream: true}));
 });
 
@@ -97,7 +99,7 @@ gulp.task("buildJs", function () {
     for (var i = 0; i < arr.length; i++) {
         browserify({
             entries: [
-                "./src/script/" + arr[i]
+                SRC +"/script/" + arr[i]
             ]
         })
             .transform(babelify.configure({
@@ -108,15 +110,14 @@ gulp.task("buildJs", function () {
                 ]
             }))
             .bundle()
-            // .pipe(uglify())
             .pipe(source(arr[i]))
-            .pipe(gulp.dest('./dest/script/'))
+            .pipe(gulp.dest(DEST + '/script/'))
             .pipe(browserSync.reload({stream: true}));
     }
 });
 //删除目录
 gulp.task('clean', function () {
-    del(["dest/"]);
+    del([DEST + "/"]);
 });
 
 //执行默认任务
