@@ -9,6 +9,7 @@ var loadingPage = new Vue({
         phoneTitle: '请输入正确的手机号',
         passwordTitle: '请输入正确格式的密码',
         checkWordTitle: '请输入正确的验证码',
+        checkPicCode: '请输入正确的图形验证码',
         getCheckWordButton: '获取验证码',
         phoneNumber: '',     //手机号码
         phoneNumShow: false,   //号码弹框提醒判断
@@ -21,8 +22,8 @@ var loadingPage = new Vue({
         isClick: false,  //点击在验证码
         isDuable: false,  //多次点击验证码
         clickColor: '#ffc000',   //点击按钮的颜色,
-        // baseUrl: 'https://www.qtz360.com/api2.2.2/rest/',   //正式url根路径
-        baseUrl: 'https://test.qtz360.com/api/rest/',  //url测试
+        baseUrl: 'https://www.qtz360.com/api2.2.2/rest/',   //正式url根路径
+        // baseUrl: 'https://test.qtz360.com/api/rest/',  //url测试
         phoneDisplay: 'none',
         checkDisplay: 'none',
         sn: 8268262,  //渠道码
@@ -118,21 +119,21 @@ var loadingPage = new Vue({
         //注册按钮点击事件
         submitClick: function () {
             //输入手机号码
-            if (!this.checkPhone(this.phoneNumber) && this.phoneNumber !== '') {
+            if (!this.checkPhone(this.phoneNumber) || this.phoneNumber !== '') {
                 this.phoneNumShow = true;
                 setTimeout(() => {
                     this.phoneNumShow = false;
                 }, 1000)
             }
             //输入密码
-            if (!this.checkPassword(this.passwordText) && this.passwordText !== ''){
+            if (!this.checkPassword(this.passwordText) || this.passwordText !== ''){
                 this.passwordShow = true;
                 setTimeout(() => {
                     this.passwordShow = false;
                 }, 1200)
             }
             //输入验证码
-            if (!this.checkWord(this.checkNumberText) && this.checkNumberText !== ''){
+            if (!this.checkWord(this.checkNumberText) || this.checkNumberText !== ''){
                 this.checkShow = true;
                 setTimeout(() => {
                     this.checkShow = false;

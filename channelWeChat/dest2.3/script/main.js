@@ -50,6 +50,7 @@ var loadingPage = new Vue({
         phoneTitle: '请输入正确的手机号',
         passwordTitle: '请输入正确格式的密码',
         checkWordTitle: '请输入正确的验证码',
+        checkPicCode: '请输入正确的图形验证码',
         getCheckWordButton: '获取验证码',
         phoneNumber: '', //手机号码
         phoneNumShow: false, //号码弹框提醒判断
@@ -62,12 +63,11 @@ var loadingPage = new Vue({
         isClick: false, //点击在验证码
         isDuable: false, //多次点击验证码
         clickColor: '#ffc000', //点击按钮的颜色,
-        // baseUrl: 'https://www.qtz360.com/api2.2.2/rest/',   //正式url根路径
-        baseUrl: 'https://test.qtz360.com/api/rest/', //url测试
+        baseUrl: 'https://www.qtz360.com/api2.2.2/rest/', //正式url根路径
+        // baseUrl: 'https://test.qtz360.com/api/rest/',  //url测试
         phoneDisplay: 'none',
         checkDisplay: 'none',
-        // sn: 5767302,  //渠道码
-        sn: 6431961, //渠道码
+        sn: 5767302, //渠道码
         // sn:6431961,  //测试渠道码
         channelId: '', //渠道id
         channelCookie: '', //渠道cookie
@@ -134,7 +134,7 @@ var loadingPage = new Vue({
             this.timestamp = Math.random().toFixed(6) * 1000000 + 1;
             this.$http.get(this.baseUrl + 'CodeOnle?imgKey=' + this.timestamp, { 'imgKey': this.timestamp }).then(function (res) {
                 $('.picCode').attr('src', _this3.baseUrl + 'CodeOnle?imgKey=' + _this3.timestamp);
-                console.log(_this3.timeStamp);
+                // console.log(this.timeStamp);
             });
         },
         //获取验证码后样式改变
@@ -156,9 +156,9 @@ var loadingPage = new Vue({
                         _this4.getCheckWordButton = '再次获取';
                         _this4.Duable = false;
                         clearInterval(id);
-                        _this4.loadPicCode();
+                        _this4.loadPicCode(); //60s之后重新加载图片验证码   图片验证码接口在验证正确后会自动清除当前缓存的图片验证码
                     }
-                    console.log(_this4.isClick, '样式改变中..');
+                    // console.log(this.isClick, '样式改变中..');
                 }, 1000);
             }
         },
@@ -167,21 +167,21 @@ var loadingPage = new Vue({
             var _this5 = this;
 
             //输入手机号码
-            if (!this.checkPhone(this.phoneNumber) && this.phoneNumber !== '') {
+            if (!this.checkPhone(this.phoneNumber) || this.phoneNumber !== '') {
                 this.phoneNumShow = true;
                 setTimeout(function () {
                     _this5.phoneNumShow = false;
                 }, 1000);
             }
             //输入密码
-            if (!this.checkPassword(this.passwordText) && this.passwordText !== '') {
+            if (!this.checkPassword(this.passwordText) || this.passwordText !== '') {
                 this.passwordShow = true;
                 setTimeout(function () {
                     _this5.passwordShow = false;
                 }, 1200);
             }
             //输入验证码
-            if (!this.checkWord(this.checkNumberText) && this.checkNumberText !== '') {
+            if (!this.checkWord(this.checkNumberText) || this.checkNumberText !== '') {
                 this.checkShow = true;
                 setTimeout(function () {
                     _this5.checkShow = false;
@@ -242,7 +242,7 @@ var loadingPage = new Vue({
         //获取验证码
         getPhoneCheckCode: function getPhoneCheckCode() {
             var _this = this;
-            console.log(this.isClick + '获取验证码之前判断');
+            // console.log(this.isClick+ '获取验证码之前判断');
             if (!_this.isClick) {
                 //防止多次点击
                 _this.$http.get(_this.baseUrl + 'sendPCode', {
@@ -274,8 +274,8 @@ var loadingPage = new Vue({
                     this.channelCookie = res.data.cookie;
                     this.register(); //注册
                 } else {
-                    console.log('渠道获取成功' + res.data.rmg);
-                }
+                        // console.log('渠道获取成功'+ res.data.rmg);
+                    }
             })['catch'](function (res) {});
         },
         //注册
