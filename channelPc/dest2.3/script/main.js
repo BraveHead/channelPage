@@ -218,11 +218,7 @@ autoSetRem.set(750);
                 },
                 //注册按钮点击事件
                 submitClick: function submitClick() {
-                    if (window.location.href.indexOf('sn=6220172') != -1 || window.location.href.indexOf('sn=6246652') != -1) {
-                        _taq.push({ convert_id: "64973944655", event_type: "form" });
-                    }
                     var _this4 = this;
-
                     //输入手机号码
                     if (!this.checkPhone(this.phoneNumber) && this.phoneNumber !== '') {
                         this.phoneNumShow = true;
