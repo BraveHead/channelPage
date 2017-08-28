@@ -188,7 +188,7 @@ autoSetRem.set(750);
                     this.timestamp = Math.random().toFixed(6) * 1000000 + 1;
                     this.$http.get(this.baseUrl + 'CodeOnle?imgKey=' + this.timestamp, { 'imgKey': this.timestamp }).then(function (res) {
                         $('.picCode').attr('src', _this7.baseUrl + 'CodeOnle?imgKey=' + _this7.timestamp);
-                        console.log(_this7.timeStamp);
+                        // console.log(this.timeStamp);
                     });
                 },
                 //获取验证码后样式改变
@@ -210,6 +210,7 @@ autoSetRem.set(750);
                                 _this3.getCheckWordButton = '再次获取';
                                 _this3.Duable = false;
                                 clearInterval(id);
+                                this.loadPicCode(); //60s之后重新加载图片验证码   图片验证码接口在验证正确后会自动清除当前缓存的图片验证码
                             }
                             // console.log(_this3.isClick, '样式改变中..');
                         }, 1000);

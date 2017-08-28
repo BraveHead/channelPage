@@ -25,7 +25,8 @@ var loadingPage = new Vue({
         baseUrl: 'https://test.qtz360.com/api/rest/',  //url测试
         phoneDisplay: 'none',
         checkDisplay: 'none',
-        sn: 8268262,  //渠道码
+        // sn: 5767302,  //渠道码
+        sn: 6431961,  //渠道码
         // sn:6431961,  //测试渠道码
         channelId: '',  //渠道id
         channelCookie: '',  //渠道cookie
@@ -276,5 +277,3 @@ Vue.nextTick(function () {
     loadingPage.loadPicCode();
     loadingPage.submitClick();
 });
-
-

@@ -25,8 +25,8 @@ var gutil = require("gulp-util");
 var browserifyShim = require("browserify-shim");
 var browserslist = require('browserslist');
 var salad = require('postcss-salad');
-var DEST = './dest2.2.2';
-var SRC= './src2.2.2';
+var DEST = './dest2.3';
+var SRC= './src2.3';
 // 静态服务器 + 监听 scss/html/js/images 文件
 gulp.task('serve', ['css', "copyHtml", "copyJs", "buildJs", "images"], function () {
     browserSync.init({
