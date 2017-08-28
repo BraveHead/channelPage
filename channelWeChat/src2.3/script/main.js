@@ -242,7 +242,7 @@ var loadingPage = new Vue({
             }).then(function (res) {
                 switch (res.data.rcd){
                     case 'R0001':
-                        window.location.href = "https://www.qtz360.com/ch/918/getRed.html";
+                        window.location.href = "https://www.qtz360.com/ch/918-wx/getRed.html";
                         break;
                     case 'M0008_2':
                         this.phoneDisplay = 'block';
