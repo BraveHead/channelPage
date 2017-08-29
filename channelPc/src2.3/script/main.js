@@ -168,14 +168,14 @@
             submitClick: function submitClick() {
                 var _this4 = this;
                 //输入手机号码
-                if (!this.checkPhone(this.phoneNumber) && this.phoneNumber !== '') {
+                if (!this.checkPhone(this.phoneNumber) || this.phoneNumber !== '') {
                     this.phoneNumShow = true;
                     setTimeout(function () {
                         _this4.phoneNumShow = false;
                     }, 1000);
                 }
                 //输入密码
-                if (!this.checkPassword(this.passwordText) && this.passwordText !== '') {
+                if (!this.checkPassword(this.passwordText) || this.passwordText !== '') {
                     this.passwordShow = true;
                     setTimeout(function () {
                         _this4.passwordShow = false;
@@ -263,7 +263,7 @@
                         if (res.data.rcd === 'R0001' || res.data.rcd === 'M0008_23') {
                             _this.checkWordChange();
                         }
-                        if(res.data.rcd === 'M0008_24'){
+                        if(res.data.rcd === 'M0008_24' || res.data.rcd === 'M0008_25'){
                             this.picCodeTitle = true;
                             setTimeout(()=>{
                                 this.picCodeTitle = false;

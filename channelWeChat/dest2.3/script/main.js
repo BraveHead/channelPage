@@ -256,7 +256,7 @@ var loadingPage = new Vue({
                     if (res.data.rcd === 'R0001' || res.data.rcd === 'M0008_23') {
                         _this.checkWordChange();
                     }
-                    if (res.data.rcd === 'M0008_24') {
+                    if (res.data.rcd === 'M0008_24' || res.data.rcd === 'M0008_25') {
                         this.picCodeTitle = true;
                         setTimeout(function () {
                             _this7.picCodeTitle = false;
