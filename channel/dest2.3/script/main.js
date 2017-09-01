@@ -210,7 +210,7 @@ autoSetRem.set(750);
                                 _this3.getCheckWordButton = '再次获取';
                                 _this3.Duable = false;
                                 clearInterval(id);
-                                this.loadPicCode(); //60s之后重新加载图片验证码   图片验证码接口在验证正确后会自动清除当前缓存的图片验证码
+                                _this3.loadPicCode(); //60s之后重新加载图片验证码   图片验证码接口在验证正确后会自动清除当前缓存的图片验证码
                             }
                             // console.log(_this3.isClick, '样式改变中..');
                         }, 1000);
