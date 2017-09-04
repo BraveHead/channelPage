@@ -312,7 +312,15 @@
                                     window.location.href = "/ch/getRed.html";
                                 }});
                             }else{
-                                window.location.href = "/ch/getRed.html";
+                                //今日头条提交监控
+                                if(window.location.href.indexOf('sn=6220172')!=-1||window.location.href.indexOf('sn=6246652')!=-1){
+                                    _taq.push({convert_id:"65608210816", event_type:"form"});
+                                    setTimeout(function () {
+                                        window.location.href = "/ch/getRed.html";
+                                    }, 200);
+                                }else{
+                                    window.location.href = "/ch/getRed.html";
+                                }
                             }
                             break;
                         case 'M0008_2':

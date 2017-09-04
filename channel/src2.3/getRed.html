@@ -13,27 +13,6 @@
     <script>
         window.onload = function () {
             _czc.push(﻿["_trackEvent",'page3','点击','page3']);
-            //今日头条监控
-            (function(root) {
-                if(window.location.href.indexOf('sn=6220172')!=-1||window.location.href.indexOf('sn=6246652')!=-1){
-                    root._tt_config = true;
-                    var ta = document.createElement('script'); ta.type = 'text/javascript'; ta.async = true;
-                    ta.src = document.location.protocol + '//' + 's3.pstatp.com/bytecom/resource/track_log/src/toutiao-track-log.js';
-                    ta.onerror = function () {
-                        var request = new XMLHttpRequest();
-                        var web_url = window.encodeURIComponent(window.location.href);
-                        var js_url  = ta.src;
-                        var url = '//ad.toutiao.com/link_monitor/cdn_failed?web_url=' + web_url + '&js_url=' + js_url + '&convert_id=65608210816';
-                        request.open('GET', url, true);
-                        request.send(null);
-                    }
-                    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ta, s);
-                }
-            })(window);
-            //今日头条提交监控
-            if(window.location.href.indexOf('sn=6220172')!=-1||window.location.href.indexOf('sn=6246652')!=-1){
-                _taq.push({convert_id:"65608210816", event_type:"form"});
-            }
         }
     </script>
 </head>

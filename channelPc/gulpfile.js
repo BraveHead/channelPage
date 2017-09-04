@@ -25,6 +25,7 @@ var gutil = require("gulp-util");
 var browserifyShim = require("browserify-shim");
 var browserslist = require('browserslist');
 var salad = require('postcss-salad');
+var htmlmin = require('gulp-htmlmin');
 var DEST = './dest2.3';
 var SRC= './src2.3';
 // 静态服务器 + 监听 scss/html/js/images 文件
@@ -79,6 +80,16 @@ gulp.task('copyHtml', function () {
             includerReg: /<!\-\-include\s+"([^"]+)"\-\->/g
         }))
         .pipe(rev())
+        .pipe(htmlmin({
+            collapseWhitespace: true,//压缩HTML
+            collapseBooleanAttributes: true,//省略布尔属性的值 <input checked="true"/> ==> <input />
+            removeEmptyAttributes: true,//删除所有空格作属性值 <input id="" /> ==> <input />
+            removeScriptTypeAttributes: true,//删除<script>的type="text/javascript"
+            removeStyleLinkTypeAttributes: true,//删除<style>和<link>的type="text/css"
+            removeComments: true,//清除HTML注释
+            minifyJS: true,//压缩页面JS
+            minifyCSS: true//压缩页面CSS
+        }))
         .pipe(gulp.dest(DEST+ '/'))
         .pipe(browserSync.reload({stream: true}));
 });
@@ -111,9 +122,22 @@ gulp.task("buildJs", function () {
             }))
             .bundle()
             .pipe(source(arr[i]))
+            .pipe(buffer())
+            .pipe(uglify())
             .pipe(gulp.dest(DEST + '/script/'))
             .pipe(browserSync.reload({stream: true}));
     }
+});
+//压缩html的代码
+gulp.task('htmlmin', function () {
+    gulp.src([SRC + '/*.html'])
+        .pipe(htmlmini({
+            removeComments: true,//清除HTML注释
+            minifyJS: true,//压缩页面JS
+            minifyCSS: true//压缩页面CSS
+        }))
+        .pipe(gulp.dest(DEST + '/'))
+        .pipe(browserSync.reload({stream: true}));
 });
 //删除目录
 gulp.task('clean', function () {
