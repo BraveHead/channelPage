@@ -64,7 +64,8 @@
             isClick: false, //点击在验证码
             isDuable: false, //多次点击验证码
             clickColor: '#ffc000', //点击按钮的颜色,
-            baseUrl: 'https://www.qtz360.com/api2.2.2/rest/', //正式url根路径
+            // baseUrl: 'https://www.qtz360.com/api2.2.2/rest/', //正式url2.2根路径
+            baseUrl: 'https://www.qtz360.com/api2.2.3/rest/', //正式url2.2根路径
             // baseUrl: 'https://www.qtz360.com/api/rest/',  //url跟路径
             // baseUrl:'https://test.qtz360.com/api/rest/',
             phoneDisplay: 'none',

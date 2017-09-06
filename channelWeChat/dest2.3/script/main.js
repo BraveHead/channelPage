@@ -1,45 +1,7 @@
 (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
 'use strict';
 
-/**
- * Created by Yy on 2017/7/10.
- */
-var autoSetRem = function (doc, win) {
-    var docEl = doc.documentElement,
-        done = false,
-        resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
-        set = function set(paper) {
-        if (paper == null) {
-            paper = 750;
-        }
-        var clientWidth = docEl.clientWidth || win.innerWidth || screen.width;
-        if (clientWidth >= 1200) {
-            clientWidth = 750;
-        }
-        if (clientWidth <= 320) {
-            clientWidth = 320;
-        }
-        if (!clientWidth) return;
-        docEl.style.fontSize = 100 * (clientWidth / paper) + 'px';
-        done = true;
-        return done;
-    };
-    return {
-        set: set
-    };
-    //AbortifbrowserdoesnotsupportaddEventListener
-    if (!doc.addEventListener) return;
-    win.addEventListener(resizeEvt, set, false);
-    doc.addEventListener('DOMContentLoaded', set, false);
-}(document, window);
-
-autoSetRem.set(750);
-
-},{}],2:[function(require,module,exports){
-'use strict';
-
-require('./lib/autoSetRem');
-
+// import './lib/autoSetRem'
 Vue.http.options.emulateJSON = true;
 var loadingPage = new Vue({
     el: '#loading-page',
@@ -63,7 +25,8 @@ var loadingPage = new Vue({
         isClick: false, //点击在验证码
         isDuable: false, //多次点击验证码
         clickColor: '#ffc000', //点击按钮的颜色,
-        baseUrl: 'https://www.qtz360.com/api2.2.2/rest/', //正式url根路径
+        // baseUrl: 'https://www.qtz360.com/api2.2.2/rest/',   //正式url2.2根路径
+        baseUrl: 'https://www.qtz360.com/api2.2.3/rest/', //正式url2.根路径
         // baseUrl: 'https://test.qtz360.com/api/rest/',  //url测试
         phoneDisplay: 'none',
         checkDisplay: 'none',
@@ -329,4 +292,4 @@ Vue.nextTick(function () {
     loadingPage.submitClick();
 });
 
-},{"./lib/autoSetRem":1}]},{},[2]);
+},{}]},{},[1]);
