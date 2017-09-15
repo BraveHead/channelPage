@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>晴天助理财-注册</title>
+    <link rel='stylesheet' href="style/main.min.css"/>
+</head>
+<body>
+<header class="header">
+    <a class="register" name="register">
+        <div class="register-main">
+            <h1>快速注册</h1>
+            <img src="./assets/register-title.png" alt="新手福利" class="register-title">
+            <form class='register-form'>
+                <div class="phone-main">
+                    <input oninput="setPhoneCode(this)" onblur="phoneValidate()" class="phone" id='phone' type='number' pattern='\d*' placeholder="请输入您的手机号码"/>
+                    <img onclick="clearInputValue(this)" src="./assets/clear.png" alt="清空手机号码" id="clear-phone"
+                         class="clear-phone">
+                </div>
+                <div class="error phone-error" id="phone-error"></div>
+                <div class="code-main">
+                    <input oninput="setPhoneCode(this)" onblur="codeValidate()" class="code" id="code" type='number' pattern='\d*'
+                           placeholder="请输入验证码"/>
+                    <span class="get-code" id="get-code">获取验证码</span>
+                </div>
+                <div class="error code-error" id="code-error"></div>
+                <div class="password-main">
+                    <input oninput="clearHideShowImg(this)" onblur="passwordValidate()" class="password"
+                           type="password" maxlength="20"
+                           id="password"
+                           placeholder="请设置8-20位数字与字母组合密码"/>
+                    <img onclick="clearInputValue(this)" src="./assets/clear.png" alt="清空密码"
+                         id="clear-password" class="clear-password">
+                    <img onclick="passwordToggleHideShow(this)" src="./assets/hide.png" alt="显示隐藏密码"
+                         id="hide-show" class="hide-show">
+                </div>
+                <div class="error password-error" id="password-error"></div>
+                <img onclick="formSubmit()" class="submit" id="submit" src="./assets/button.png" alt="立即领取1690元红包">
+            </form>
+        </div>
+    </a>
+    <a class="header-list"></a>
+</header>
+<div class="jf-activity">
+    <img src="assets/jf-title.png"/>
+    <img src="assets/jf-group-1.png"/>
+    <img src="assets/jf-group-2.png"/>
+</div>
+<div class="jp-activity">
+    <img src="assets/jp-title.png" class="jp-title"/>
+    <ul class="bd-container">
+        <li>
+            <div class="jp-name"><span>新手标专享</span><img src="assets/xs-logo.png"/></div>
+            <ul class="bd-details clearfix">
+                <li>
+                    <span>预期年化收益率</span>
+                    <p>12%+3%</p>
+                </li>
+                <li>
+                    <span>理财期限</span>
+                    <p>10<span>天</span></p>
+                </li>
+                <li>
+                    <span>红包可用</span>
+                    <img src="assets/hb-logo.png" class="hb-logo"/>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <div class="jp-name"><span>车贷抵押标</span><img src="assets/cyb-logo.png"/></div>
+            <ul class="bd-details clearfix">
+                <li>
+                    <span>预期年化收益率</span>
+                    <p>8%</p>
+                </li>
+                <li>
+                    <span>理财期限</span>
+                    <p>30<span>天</span></p>
+                </li>
+                <li>
+                    <span>红包可用</span>
+                    <img src="assets/hb-logo.png" class="hb-logo"/>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <div class="jp-name"><span>车贷抵押标</span><img src="assets/cyb-logo.png"/></div>
+            <ul class="bd-details clearfix">
+                <li>
+                    <span>预期年化收益率</span>
+                    <p>9%</p>
+                </li>
+                <li>
+                    <span>理财期限</span>
+                    <p>60<span>天</span></p>
+                </li>
+                <li>
+                    <span>红包可用</span>
+                    <img src="assets/hb-logo.png" class="hb-logo"/>
+                </li>
+            </ul>
+        </li>
+    </ul>
+</div>
+<div class="qtz-big">
+    <img src="assets/qtz-big-title.png" class="qtz-big-title"/>
+    <div class="photo-wall">
+        <a class="pic-1"></a>
+        <a class="pic-2">晴天助携手网易云达成战略合作</a>
+        <a class="pic-3"><p>获准加入国内首个金融科技协会——浙江省金融科技协会</p></a>
+        <a class="pic-4"></a>
+        <a class="pic-5"><p>与新华社中国经济信息社浙江中心签署合作协议</p></a>
+        <a class="pic-6"></a>
+        <a class="pic-7"></a>
+        <a class="pic-8"></a>
+        <a class="pic-9">浦江分公司盛大开业</a>
+        <a class="pic-10">晴天助抗高温送清凉系列公益活动</a>
+        <img src="assets/big-thr.png" class="hover-one hover"/>
+        <img src="assets/big-one.png" class="hover-two"/>
+        <img src="assets/big-two.png" class="hover-thr"/>
+        <img src="assets/big-five.png" class="hover-five"/>
+        <img src="assets/big-four.png" class="hover-four"/>
+    </div>
+</div>
+<script src="script/lib/jquery-1.10.1.min.js"></script>
+<script src="script/main.js"></script>
+</body>
+</html>
