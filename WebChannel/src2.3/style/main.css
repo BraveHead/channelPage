@@ -11,10 +11,10 @@ body{
 a{text-decoration: none;-webkit-tap-highlight-color:rgba(0,0,0,0);}
 
 input{outline: none;-webkit-appearance: none;-webkit-appearance:none;-webkit-tap-highlight-color:rgba(255,255,255,0);font-size: 0.24rem;}
-input:focus{
-    border: 0.02rem solid #ffc000;
-    border-radius:0.10rem ;
-}
+/*input:focus{*/
+    /*border: 0.02rem solid #ffc000;*/
+    /*border-radius:0.10rem ;*/
+/*}*/
 ::-webkit-scrollbar{
     width: 0.08rem;
     margin-right: 0.08rem;
@@ -275,38 +275,39 @@ header{
 }
 .photo-wall>img{
     position: absolute;
+    border: 10px solid #ffffff;
 }
 .hover-one{
-    width:316px;
-    height: 186px;
+    width:296px;
+    height: 166px;
     left: -82px;
     top: 192px;
     z-index: 2;
 }
 .hover-two{
-    width:520px;
-    height: 320px;
+    width:500px;
+    height: 300px;
     left: 266px;
     top: 70px;
     z-index: 2;
 }
 .hover-thr{
-    width:456px;
-    height: 270px;
+    width:436px;
+    height: 250px;
     right: -60px;
     top: 310px;
     z-index: 2;
 }
 .hover-four{
-    width:404px;
-    height: 240px;
+    width:384px;
+    height: 220px;
     left: 170px;
     top: 476px;
     z-index: 2;
 }
 .hover-five{
-    width:350px;
-    height: 206px;
+    width:330px;
+    height: 186px;
     left: 585px;
     top: 590px;
     z-index: 2;
@@ -400,7 +401,7 @@ h1 {
         height: 330px;
         position: absolute;
         right: 0;
-        top: 50%;
+        top: 60%;
         margin: -165px 0 0;
         -webkit-box-shadow: 0 0 10px #999999;
         -moz-box-shadow: 0 0 10px #999999;
@@ -518,3 +519,84 @@ h1 {
         width: 100%;
         display: block; }
 
+
+    .alert-pic-code{
+        display: none;
+        position: fixed;
+        top: 0;
+        left:0;
+        z-index: 10;
+        border-radius: 5px;
+    }
+    .pic-code-center{
+        width: 340px;
+        height: 254px;
+        background-color: #ffffff;
+        position: fixed;
+        left: 50%;
+        top: 50%;
+        margin-left: -170px;
+        margin-top: -127px;
+        z-index: 11;
+        border-radius: 5px;
+    }
+    .pic-code-title{
+        display: block;
+        width: 254px;
+        height: 24px;
+        text-align: center;
+        color: #423e42;
+        font-size: 20px;
+        line-height: 24px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-top: 50px;
+        letter-spacing: 2.0px;
+    }
+    .pic-code-container{
+        width: 254px;
+        height: 35px;
+        border: 1px solid #d8d8d8;
+        margin-top: 20px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .input-pic-code{
+        float:left;
+        display: block;
+        padding-left: 10px;
+        height: 17px;
+        padding-top: 9px;
+        padding-bottom: 9px;
+        text-align: left;
+        line-height: 17px;
+        font-size: 14px;
+        border: 0;
+    }
+    .pic-code{
+        display: block;
+        width: 70px;
+        height: 35px;
+        float: right;
+    }
+    .pic-code-error{
+        width: 254px;
+        height: 14px;
+        text-align: left;
+        color: #ff9533;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 5px;
+    }
+    .submit-pic-code{
+        margin-top: 16px;
+        cursor: pointer;
+    }
+    .close{
+        position: absolute;
+        width: 40px;
+        height: 40px;
+        top: 0;
+        right: 0;
+        cursor: pointer;
+    }

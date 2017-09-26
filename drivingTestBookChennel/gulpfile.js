@@ -28,15 +28,15 @@ var salad = require('postcss-salad');
 var DEST = './dest2.3';
 var SRC= './src2.3';
 // 静态服务器 + 监听 scss/html/js/images 文件
-gulp.task('serve', ['css', "copyHtml", "copyJs", "buildJs" ,"images"], function () {
+gulp.task('serve', ['css', "copyHtml", "copyJs", "buildJs", "images"], function () {
     browserSync.init({
         server: DEST,
         ghostMode: false,   //禁止多设备联动
     });
     gulp.watch(SRC +"/assets/(*.png|*.jpg|*.svg)", ['images']);
     gulp.watch(SRC + "/style/*.css", ['css']);
-    gulp.watch(SRC + "/*.html", ['copyHtml']);
-    gulp.watch(SRC + "/script/*.js", ['buildJs']);
+    gulp.watch(SRC + "src/*.html", ['copyHtml']);
+    gulp.watch(SRC + "src/script/*.js", ['buildJs']);
 });
 
 // 编译压缩css 输出到目标目录
@@ -90,43 +90,33 @@ gulp.task('copyJs', function () {
         .pipe(browserSync.reload({stream: true}));
 });
 
-gulp.task('buildJs', function () {
-    gulp.src([SRC + '/script/main.js'])
-        .pipe(uglify())
-        .pipe(gulp.dest(DEST + '/script/'))
-        .pipe(browserSync.reload({stream: true}));
-});
-
 //  编译自定义的js文件
-// gulp.task("buildJs", function () {
-//     var arr = [
-//         "main.js"
-//     ];
-//
-//     // for (var i = 0; i < arr.length; i++) {
-//     //     browserify({
-//     //         entries: [
-//     //             SRC +"/script/" + arr[i]
-//     //         ]
-//     //     })
-//     //         .transform(babelify.configure({
-//     //             presets: ["es2015"],
-//     //             plugins : [  //用来把es5的代码转换，并配合es5-shim.min.js和es5-sham.min.js的垫片，让ie8可以兼容ie8不支持的es5部分特性
-//     //                 "transform-es3-property-literals",
-//     //                 "transform-es3-member-expression-literals",
-//     //             ]
-//     //         }))
-//     //         .bundle()
-//     //         .pipe(source(arr[i]))
-//     //         .pipe(gulp.dest(DEST + '/script/'))
-//     //         .pipe(browserSync.reload({stream: true}));
-//     // }
-//     gulp.src(SRC+'/main.js')
-//         .pipe(buffer())
-//         .pipe(uglify())
-//         .pipe(gulp.dest(DEST + '/script/'))
-//         .pipe(browserSync.reload({stream: true}));
-// });
+gulp.task("buildJs", function () {
+    var arr = [
+        "main.js"
+    ];
+
+    for (var i = 0; i < arr.length; i++) {
+        browserify({
+            entries: [
+                SRC +"/script/" + arr[i]
+            ]
+        })
+            .transform(babelify.configure({
+                presets: ["es2015"],
+                plugins : [  //用来把es5的代码转换，并配合es5-shim.min.js和es5-sham.min.js的垫片，让ie8可以兼容ie8不支持的es5部分特性
+                    "transform-es3-property-literals",
+                    "transform-es3-member-expression-literals",
+                ]
+            }))
+            .bundle()
+            .pipe(source(arr[i]))
+            .pipe(buffer())
+            .pipe(uglify())
+            .pipe(gulp.dest(DEST + '/script/'))
+            .pipe(browserSync.reload({stream: true}));
+    }
+});
 //删除目录
 gulp.task('clean', function () {
     del([DEST + "/"]);
