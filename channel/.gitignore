@@ -1,5 +1,4 @@
 .DS_Store
-node_modules/
 *.xml;
 
 npm-debug.log
@@ -11,4 +10,7 @@ yarn-error.log
 *.ntvs*
 *.njsproj
 *.sln
-.xml
+*.xml
+node_modules
+dest2.2.2
+dest2.3

@@ -23,12 +23,12 @@ var loadingPage = new Vue({
         isDuable: false,  //多次点击验证码
         clickColor: '#ffc000',   //点击按钮的颜色,
         // baseUrl: 'https://www.qtz360.com/api2.2.2/rest/',   //正式url2.2根路径
-        baseUrl: 'https://www.qtz360.com/api2.2.3/rest/',   //正式url2.3根路径
-        // baseUrl: 'https://test.qtz360.com/api/rest/',  //url测试
+        // baseUrl: window.commonRequestPrefix,   //正式url2.3根路径
+        baseUrl: 'https://test.qtz360.com/api/rest/',  //url测试
         phoneDisplay: 'none',
         checkDisplay: 'none',
-        sn: 8932543,  //ETC渠道码
-        // sn:6431961,  //测试渠道码
+        // sn: 8932543,  //ETC渠道码
+        sn:6431961,  //测试渠道码
         channelId: '',  //渠道id
         channelCookie: '',  //渠道cookie
         timeStamp : ''
@@ -239,7 +239,10 @@ var loadingPage = new Vue({
                 inviteuserid: this.channelId,
                 cr: this.channelCookie,
                 invitePhone: 'null',
-                sourceFrom: 2
+                sourceFrom: 2,
+                im:'mobile',
+                deviceName:'触屏版',
+                deviceType:4,
             }).then(function (res) {
                 switch (res.data.rcd){
                     case 'R0001':

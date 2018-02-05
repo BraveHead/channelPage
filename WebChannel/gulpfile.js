@@ -53,7 +53,7 @@ gulp.task('css', function () {
         ]))
         .pipe(minifycss())
         .pipe(rename({suffix:'.min'}))
-        .pipe(sourcemaps.write())
+        // .pipe(sourcemaps.write())
         .pipe(gulp.dest(DEST + '/style/'))
         .pipe(browserSync.reload({stream: true}));
 });

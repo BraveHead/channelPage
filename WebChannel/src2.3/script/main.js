@@ -1,35 +1,42 @@
-﻿
-//渠道
+﻿//渠道
 var inviteuserid = '';
 var cr = '';
 var imgKey = '';
-var appLink = 'https://www.qtz360.com/ch/?sn=';
+// var appLink = 'https://test.qtz360.com/api1.1.0/rest/?sn=';  测试
+var appLink = 'https://www.qtz360.com/ch/?sn=';   //正式
 //接口
-// var ajaxUrl = 'https://www.qtz360.com/api/rest/'
-// var ajaxUrl = 'https://rest.qtz360.com/rest/';
-// var ajaxUrl = 'https://test.qtz360.com/api/rest/';
-var ajaxUrl = 'https://test.qtz360.com/api/rest/';
+// var ajaxUrl = 'https://test.qtz360.com/api1.1.0/rest/';  //测试
+var ajaxUrl = window.commonRequestPrefix;  //正式
 
 window.onload = init;
-
 function init() {
-    if(!IsPC()){
-        window.location.href = appLink + window.location.href.slice(window.location.href.indexOf('sn=') + 3);
+    if (!IsPC()) {
+        if (window.location.href.indexOf('sn=') === -1 && window.location.href.indexOf('tg=') === -1) {
+            window.location.href = 'https://www.qtz360.com/ch/';
+        }else if(window.location.href.indexOf('tg=') !== -1) {
+            window.location.href = 'https://www.qtz360.com/ch/?tg=' + window.location.href.slice(window.location.href.indexOf('tg=') + 3);
+        }else{
+            window.location.href = appLink + window.location.href.slice(window.location.href.indexOf('sn=') + 3);
+        }
     }else{
         IsPC();
         friendShowHide();
         // document.getElementById('submit-pic-code').addEventListener('click', queryPhone);
         document.getElementById('get-code').addEventListener('click', queryPhone);
+
     }
 }
 
 //是否为pc端入口 返回 true false
-function IsPC() {;;
+function IsPC() {
     var userAgentInfo = navigator.userAgent;
     var Agents = new Array("Android", "iPhone", "SymbianOS", "Windows Phone", "iPad", "iPod");
     var flag = true;
     for (var v = 0; v < Agents.length; v++) {
-        if (userAgentInfo.indexOf(Agents[v]) > 0) { flag = false; break; }
+        if (userAgentInfo.indexOf(Agents[v]) > 0) {
+            flag = false;
+            break;
+        }
     }
     return flag;
 }
@@ -260,6 +267,7 @@ function sendCode(phone) {
             }
         }
     });
+
     //获取验证码文本修改
     function changeCodeText(time) {
         var t = time < 10 ? '0' + time : time;
@@ -285,22 +293,33 @@ function formSubmit() {
         var phone = document.getElementById('phone').value;
         var password = document.getElementById('password').value;
         var code = document.getElementById('code').value;
+        var tgName = '';
+        var tgvalue = '';
+        if(window.location.href.indexOf('tg=')!==-1){
+            tgName = 'user.organization';
+            tgvalue = window.location.href.slice(window.location.href.indexOf('tg=')+3);
+        }else{
+            tgName = 'user.organization';
+            tgvalue = '';
+        }
+        var dataObj =  {
+            'user.phone': phone,
+            'user.password': password,
+            codeReg: code,
+            inviteuserid: inviteuserid,
+            cr: cr,
+            invitePhone: 'null',
+            sourceFrom: 1,
+            im: 'pc',
+            deviceName: 'Web版',
+            deviceType: 3,
+        };
+        dataObj[tgName]= tgvalue;
         ajaxSubmit({
             type: 'POST',
             url: 'reg',
             data: IsPC() ?
-                {
-                    'user.phone': phone,
-                    'user.password': password,
-                    codeReg: code,
-                    inviteuserid: inviteuserid,
-                    cr: cr,
-                    invitePhone: 'null',
-                    sourceFrom: 1,
-                    im: 'pc',
-                    deviceName: 'Web版',
-                    deviceType:3,
-                }
+                dataObj
                 : {
                     'user.phone': phone,
                     'user.password': password,
@@ -308,17 +327,19 @@ function formSubmit() {
                     inviteuserid: inviteuserid,
                     cr: cr,
                     invitePhone: 'null',
-                    sourceFrom: 2
+                    sourceFrom: 2,
+                    im: 'pc',
+                    deviceName: 'Web版',
+                    deviceType: 3,
                 },
             success: function (data) {
                 if (data.rcd === 'R0001') {
-                    // window.location.href = 'https://www.qtz360.com/user/login.do';
-                    console.log(data);
+                    window.location.href = 'https://www.qtz360.com/user/login.do';
                 } else {
                     if (IsPC()) {
-                        if(data.rcd === 'M0008_1'){
+                        if (data.rcd === 'M0008_1') {
                             $('#code-error').html(data.rmg);
-                        }else if(data.rcd === 'M0008_4'){
+                        } else if (data.rcd === 'M0008_4') {
                             $('#password-error').html(data.rmg);
                         }
                     } else {
@@ -405,39 +426,44 @@ function friendShowHide() {
         })
     }
 }
+
 //图片放大
 var hoverPic = $('.photo-wall img');
 var number = 0;
+
 function imgHover(index) {
     hoverPic.removeClass('hover').eq(index).addClass('hover');
 }
+
 imgHover(number);
-setInterval(function (){
+setInterval(function () {
     number++;
-    if(number > hoverPic.length-1){
+    if (number > hoverPic.length - 1) {
         number = 0;
     }
     imgHover(number);
-},1900);
+}, 1900);
 
 //弹出图形验证码弹框
 function alertPicCode() {
-    $('body').css('overflow','hidden');
+    $('body').css('overflow', 'hidden');
     $('.alert-pic-code').show().css({
         width: '100%',
         height: document.documentElement.clientHeight + 'px',
         backgroundColor: 'rgba(0,0,0,0.5)',
     });
-    imgKey = Math.random().toFixed(6)*1000000+1;
+    imgKey = Math.random().toFixed(6) * 1000000 + 1;
     $('.input-pic-code').val('');
     loadPicCode(imgKey);
     clickChangePicCode();   //点击切换验证码
     var phone = document.getElementById('phone');
     $('.submit-pic-code').on('click', function () {
         sendCode(phone);
+        $('body').css('overflow', 'scroll');
     });
     $('.close').on('click', function () {
         $('.alert-pic-code').hide();
+        $('body').css('overflow', 'scroll');
     })
 }
 
@@ -450,8 +476,8 @@ function loadPicCode(key) {
 
 //点击切换图形验证码
 function clickChangePicCode() {
-    $('.pic-code').on('click',function () {
-        imgKey = Math.random().toFixed(6)*1000000+1;
+    $('.pic-code').on('click', function () {
+        imgKey = Math.random().toFixed(6) * 1000000 + 1;
         loadPicCode(imgKey);
     })
 }

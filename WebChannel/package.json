@@ -36,6 +36,7 @@
     "browserify-shim": "^3.8.14",
     "browserslist": "^2.3.1",
     "del": "^2.2.2",
+    "gulp": "^3.9.1",
     "gulp-autoprefixer": "^4.0.0",
     "gulp-cache": "^0.4.6",
     "gulp-concat": "^2.6.1",

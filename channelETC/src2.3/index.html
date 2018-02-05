@@ -7,8 +7,9 @@
     <meta content="yes" name="apple-mobile-web-app-capable">
     <meta content="yes" name="apple-touch-fullscreen">
     <meta content="telephone=no,email=no" name="format-detection">
-    <title>油卡大放送</title>
+    <title>壕礼大放送</title>
     <link rel="stylesheet" href="style/main.min.css"/>
+    <script src="https://www.qtz360.com/h5/plugins/commonRequestPrefix.js"></script>
     <script src="https://s22.cnzz.com/z_stat.php?id=1262703225&web_id=1262703225" language="JavaScript"></script>
     <script>
         window.onload = function () {
@@ -69,19 +70,19 @@
                     <p class="qtz-promise">* 晴天助承诺不会泄露您手机号</p>
                     <div class="input-container" style="margin-top: 0">
                         <input placeholder="请输入手机号" class="input-same"
-                               type="text" v-model="phoneNumber" v-on:blur="checkPhone(phoneNumber)"/>
+                               type="text" v-model="phoneNumber" v-on:blur="checkPhone(phoneNumber)" maxlength="11"/>
                         <img src="assets/correct-icon@2x.png" v-show="checkPhone(phoneNumber)"/>
                         <p v-show="phoneNumShow" v-bind:style="{'display': phoneDisplay}">{{phoneTitle}}</p>
                     </div>
                     <div class="input-container">
                         <input placeholder="请设置8~20位数字与字母组合密码" class="input-same"
-                               type="password" v-model="passwordText" v-on:blur="checkPassword(passwordText)"/>
+                               type="password" v-model="passwordText" v-on:blur="checkPassword(passwordText)" maxlength="20" minlength="8"/>
                         <img src="assets/correct-icon@2x.png" v-show="checkPassword(passwordText)"/>
                         <p v-show="passwordShow">{{passwordTitle}}</p>
                     </div>
                     <div class="input-container">
                         <input placeholder="请输入图形验证码" class="input-same"
-                               type="text" v-model="picCodeText"/>
+                               type="text" v-model="picCodeText" maxlength="4"/>
                         <!--<img src="assets/correct-icon@2x.png" style="right: 1.97rem" v-show="picCodeShow"/>-->
                         <img v-on:click="changePicCodeFun"
                              style="width: 1.72rem;height: 0.64rem;top: 0.12rem;right: 0.12rem;cursor: pointer" class="picCode"/>
@@ -90,7 +91,7 @@
                     </div>
                     <div class="input-container">
                         <input placeholder="短信验证码" class="input-same"
-                               type="text" v-model="checkNumberText" v-on:blur="checkWord(checkNumberText)"/>
+                               type="text" v-model="checkNumberText" v-on:blur="checkWord(checkNumberText)" maxlength="6"/>
                         <img src="assets/correct-icon@2x.png" style="right: 1.97rem" v-show="checkWord(checkNumberText)"/>
                         <a class="get-check" v-on:click="isPhoneExistence()" v-bind:style="{'color':clickColor}">{{getCheckWordButton}}</a>
                         <p v-show="checkShow" v-bind:style="{'display':checkDisplay}">{{checkWordTitle}}</p>
